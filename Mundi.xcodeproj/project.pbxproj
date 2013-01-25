@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25CFF68716B34C25002E4913 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68616B34C25002E4913 /* UIKit.framework */; };
+		25CFF68916B34C25002E4913 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68816B34C25002E4913 /* Foundation.framework */; };
+		25CFF68B16B34C25002E4913 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68A16B34C25002E4913 /* CoreGraphics.framework */; };
+		25CFF69116B34C25002E4913 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF68F16B34C25002E4913 /* InfoPlist.strings */; };
+		25CFF69316B34C25002E4913 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CFF69216B34C25002E4913 /* main.m */; };
+		25CFF69716B34C25002E4913 /* MAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CFF69616B34C25002E4913 /* MAAppDelegate.m */; };
+		25CFF69916B34C25002E4913 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69816B34C25002E4913 /* Default.png */; };
+		25CFF69B16B34C25002E4913 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69A16B34C25002E4913 /* Default@2x.png */; };
+		25CFF69D16B34C25002E4913 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69C16B34C25002E4913 /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		25CFF68216B34C25002E4913 /* Mundi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mundi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25CFF68616B34C25002E4913 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		25CFF68816B34C25002E4913 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		25CFF68A16B34C25002E4913 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		25CFF68E16B34C25002E4913 /* Mundi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mundi-Info.plist"; sourceTree = "<group>"; };
+		25CFF69016B34C25002E4913 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		25CFF69216B34C25002E4913 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		25CFF69416B34C25002E4913 /* Mundi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mundi-Prefix.pch"; sourceTree = "<group>"; };
+		25CFF69516B34C25002E4913 /* MAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAAppDelegate.h; sourceTree = "<group>"; };
+		25CFF69616B34C25002E4913 /* MAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAAppDelegate.m; sourceTree = "<group>"; };
+		25CFF69816B34C25002E4913 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		25CFF69A16B34C25002E4913 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		25CFF69C16B34C25002E4913 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25CFF67F16B34C25002E4913 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25CFF68716B34C25002E4913 /* UIKit.framework in Frameworks */,
+				25CFF68916B34C25002E4913 /* Foundation.framework in Frameworks */,
+				25CFF68B16B34C25002E4913 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25CFF67716B34C25002E4913 = {
+			isa = PBXGroup;
+			children = (
+				25CFF68C16B34C25002E4913 /* Mundi */,
+				25CFF68516B34C25002E4913 /* Frameworks */,
+				25CFF68316B34C25002E4913 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		25CFF68316B34C25002E4913 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25CFF68216B34C25002E4913 /* Mundi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		25CFF68516B34C25002E4913 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25CFF68616B34C25002E4913 /* UIKit.framework */,
+				25CFF68816B34C25002E4913 /* Foundation.framework */,
+				25CFF68A16B34C25002E4913 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		25CFF68C16B34C25002E4913 /* Mundi */ = {
+			isa = PBXGroup;
+			children = (
+				25CFF69516B34C25002E4913 /* MAAppDelegate.h */,
+				25CFF69616B34C25002E4913 /* MAAppDelegate.m */,
+				25CFF68D16B34C25002E4913 /* Supporting Files */,
+			);
+			path = Mundi;
+			sourceTree = "<group>";
+		};
+		25CFF68D16B34C25002E4913 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				25CFF68E16B34C25002E4913 /* Mundi-Info.plist */,
+				25CFF68F16B34C25002E4913 /* InfoPlist.strings */,
+				25CFF69216B34C25002E4913 /* main.m */,
+				25CFF69416B34C25002E4913 /* Mundi-Prefix.pch */,
+				25CFF69816B34C25002E4913 /* Default.png */,
+				25CFF69A16B34C25002E4913 /* Default@2x.png */,
+				25CFF69C16B34C25002E4913 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		25CFF68116B34C25002E4913 /* Mundi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25CFF6A016B34C25002E4913 /* Build configuration list for PBXNativeTarget "Mundi" */;
+			buildPhases = (
+				25CFF67E16B34C25002E4913 /* Sources */,
+				25CFF67F16B34C25002E4913 /* Frameworks */,
+				25CFF68016B34C25002E4913 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mundi;
+			productName = Mundi;
+			productReference = 25CFF68216B34C25002E4913 /* Mundi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		25CFF67916B34C25002E4913 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MA;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = hedrick.tyler;
+			};
+			buildConfigurationList = 25CFF67C16B34C25002E4913 /* Build configuration list for PBXProject "Mundi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 25CFF67716B34C25002E4913;
+			productRefGroup = 25CFF68316B34C25002E4913 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				25CFF68116B34C25002E4913 /* Mundi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		25CFF68016B34C25002E4913 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25CFF69116B34C25002E4913 /* InfoPlist.strings in Resources */,
+				25CFF69916B34C25002E4913 /* Default.png in Resources */,
+				25CFF69B16B34C25002E4913 /* Default@2x.png in Resources */,
+				25CFF69D16B34C25002E4913 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25CFF67E16B34C25002E4913 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25CFF69316B34C25002E4913 /* main.m in Sources */,
+				25CFF69716B34C25002E4913 /* MAAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		25CFF68F16B34C25002E4913 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25CFF69016B34C25002E4913 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		25CFF69E16B34C25002E4913 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		25CFF69F16B34C25002E4913 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		25CFF6A116B34C25002E4913 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mundi/Mundi-Prefix.pch";
+				INFOPLIST_FILE = "Mundi/Mundi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		25CFF6A216B34C25002E4913 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mundi/Mundi-Prefix.pch";
+				INFOPLIST_FILE = "Mundi/Mundi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25CFF67C16B34C25002E4913 /* Build configuration list for PBXProject "Mundi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25CFF69E16B34C25002E4913 /* Debug */,
+				25CFF69F16B34C25002E4913 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25CFF6A016B34C25002E4913 /* Build configuration list for PBXNativeTarget "Mundi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25CFF6A116B34C25002E4913 /* Debug */,
+				25CFF6A216B34C25002E4913 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 25CFF67916B34C25002E4913 /* Project object */;
+}
