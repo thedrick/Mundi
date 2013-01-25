@@ -7,6 +7,8 @@
 //
 
 #import "MAAppDelegate.h"
+#import <Parse/Parse.h>
+#import "MATabNavigation.h"
 
 @implementation MAAppDelegate
 
@@ -14,8 +16,15 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    [Parse setApplicationId:@"QIxv8vjLzNni3w9UTbHEMu5tskz03ApKOuAAxgxE"
+                  clientKey:@"KlZQuRozbWdWgXIOZOXDIfXG89eft2V9bdVkpJrV"];
+    
+    MATabNavigation *tabController = [[MATabNavigation alloc] init];
+    self.window.rootViewController = tabController;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
