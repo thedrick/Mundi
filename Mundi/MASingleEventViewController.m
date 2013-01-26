@@ -15,6 +15,7 @@
 @implementation MASingleEventViewController
 @synthesize eventCategory, eventName, eventCreator, eventDetails, eventImage;
 @synthesize eventLocation, eventTime;
+@synthesize updateAttendanceButton;
 
 - (id)initWithObject:(PFObject *)obj
 {
@@ -37,6 +38,18 @@
     [eventLocation setText:[object objectForKey:@"locationString"]];
     [eventDetails setText:[object objectForKey:@"details"]];
     [eventCategory setText:[object objectForKey:@"creatorUsername"]];
+    
+    PFObject *user = [PFUser currentUser];
+    NSString *userAttendingEvents = (NSString *)[user objectForKey:@"attendingEvents"];
+    
+    NSString *eventAttendees = (NSString *)[object objectForKey:@"attendees"];
+
+    if(userAttendingEvents == nil || eventAttendees == nil) {
+        updateAttendanceButton.titleLabel.text = @"+";
+    }
+    else{
+        updateAttendanceButton.titleLabel.text = @"-";
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -57,34 +70,50 @@
 - (IBAction)updateAttendance:(id)sender {
     PFObject *user = [PFUser currentUser];
     
+    //Get User ID and and User's Attending Events
     NSString *userId = user.objectId;
     NSString *userAttendingEvents = (NSString *)[user objectForKey:@"attendingEvents"];
     
+    
+    //Get Event ID and attendees
     NSString *eventId = object.objectId;
     NSString *eventAttendees = (NSString *)[object objectForKey:@"attendees"];
+    
     
     NSRange result = [eventAttendees rangeOfString:userId];
     NSString *eventAttendeesNew = [[NSString alloc] init];
     NSString *userAttendingEventsNew = [[NSString alloc] init];
     
+    //If user is not attending any events set to empty string
     if(userAttendingEvents == nil) {
         userAttendingEvents = @"";
     }
     
+    if(eventAttendees == nil) {
+        eventAttendees = @"";
+    }
+    
+    NSString *userIdWithComma = [@", " stringByAppendingString:userId];
+    NSString *eventIdWithComma = [@", " stringByAppendingString:eventId];
+    
+    //Check if user is attending event currently
     if(result.location != NSNotFound) {
-        eventAttendeesNew = [eventAttendees stringByReplacingOccurrencesOfString:userId withString:@""];
+        //IF YES, DELETE USER FROM EVENT ATTENDEES AND DELETE EVENT FROM USER'S ATTENDING EVENTS
+        eventAttendeesNew = [eventAttendees stringByReplacingOccurrencesOfString:userIdWithComma withString:@""];
         NSLog(@"eventAttendeesNew: %@", eventAttendeesNew);
         [object setObject:eventAttendeesNew forKey:@"attendees"];
-        userAttendingEventsNew = [userAttendingEvents stringByReplacingOccurrencesOfString:eventId withString:@""];
+        userAttendingEventsNew = [userAttendingEvents stringByReplacingOccurrencesOfString:eventIdWithComma withString:@""];
         [user setObject:userAttendingEventsNew forKey:@"attendingEvents"];
+        [updateAttendanceButton.titleLabel setText:@"+"];
+        [updateAttendanceButton setNeedsDisplay];
     } else {
-        NSString *appendingUserId = [@", " stringByAppendingString:userId];
-        NSString *appendingEventId = [@", " stringByAppendingString:eventId];
-        eventAttendeesNew = [eventAttendees stringByAppendingString:appendingUserId];
-        userAttendingEventsNew = [userAttendingEvents stringByAppendingString:appendingEventId];
+        //IF NO, ADD EVENT TO USER'S ATTENDING EVENTS AND ADD USER TO EVENT'S ATTENDEES
+        eventAttendeesNew = [eventAttendees stringByAppendingString:userIdWithComma];
+        userAttendingEventsNew = [userAttendingEvents stringByAppendingString:eventIdWithComma];
+        updateAttendanceButton.titleLabel.text = @"-";
+        [updateAttendanceButton setNeedsDisplay];
     }
-    NSLog(@"eventAttendeesNew outside: %@", eventAttendeesNew);
-    NSLog(@"userAttendingEventsNew outside: %@", userAttendingEventsNew);
+    //UPDATE IN DATABASE AND SAVE
     [object setObject:eventAttendeesNew forKey:@"attendees"];
     [user setObject:userAttendingEventsNew forKey:@"attendingEvents"];
     [object saveInBackground];
