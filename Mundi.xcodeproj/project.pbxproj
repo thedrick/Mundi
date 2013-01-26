@@ -24,7 +24,7 @@
 		252E513C16B34D9D0057D2D1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512F16B34D9D0057D2D1 /* StoreKit.framework */; };
 		252E513D16B34D9D0057D2D1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E513016B34D9D0057D2D1 /* SystemConfiguration.framework */; };
 		252E514016B34F280057D2D1 /* MATabNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 252E513F16B34F280057D2D1 /* MATabNavigation.m */; };
-		2559D80C16B38F3700A08A66 /* MAFeedViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2559D80B16B38F3700A08A66 /* MAFeedViewCell.m */; };
+		2559D80C16B38F3700A08A66 /* MAEventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2559D80B16B38F3700A08A66 /* MAEventViewCell.m */; };
 		255E304916B3548F003CA4FD /* MAMainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E304816B3548F003CA4FD /* MAMainNavController.m */; };
 		255E304D16B35673003CA4FD /* MAEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E304C16B35673003CA4FD /* MAEventViewController.m */; };
 		255E305816B35ECA003CA4FD /* MAEventCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E305616B35ECA003CA4FD /* MAEventCreationViewController.m */; };
@@ -62,8 +62,8 @@
 		252E513016B34D9D0057D2D1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		252E513E16B34F280057D2D1 /* MATabNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATabNavigation.h; sourceTree = "<group>"; };
 		252E513F16B34F280057D2D1 /* MATabNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATabNavigation.m; sourceTree = "<group>"; };
-		2559D80A16B38F3700A08A66 /* MAFeedViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAFeedViewCell.h; path = ../MAFeedViewCell.h; sourceTree = "<group>"; };
-		2559D80B16B38F3700A08A66 /* MAFeedViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAFeedViewCell.m; path = ../MAFeedViewCell.m; sourceTree = "<group>"; };
+		2559D80A16B38F3700A08A66 /* MAEventViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAEventViewCell.h; path = ../MAEventViewCell.h; sourceTree = "<group>"; };
+		2559D80B16B38F3700A08A66 /* MAEventViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAEventViewCell.m; path = ../MAEventViewCell.m; sourceTree = "<group>"; };
 		255E304716B3548F003CA4FD /* MAMainNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMainNavController.h; sourceTree = "<group>"; };
 		255E304816B3548F003CA4FD /* MAMainNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMainNavController.m; sourceTree = "<group>"; };
 		255E304B16B35673003CA4FD /* MAEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAEventViewController.h; sourceTree = "<group>"; };
@@ -172,8 +172,8 @@
 				252E513F16B34F280057D2D1 /* MATabNavigation.m */,
 				255E304B16B35673003CA4FD /* MAEventViewController.h */,
 				255E304C16B35673003CA4FD /* MAEventViewController.m */,
-				2559D80A16B38F3700A08A66 /* MAFeedViewCell.h */,
-				2559D80B16B38F3700A08A66 /* MAFeedViewCell.m */,
+				2559D80A16B38F3700A08A66 /* MAEventViewCell.h */,
+				2559D80B16B38F3700A08A66 /* MAEventViewCell.m */,
 				251B54BA16B37CE900518258 /* MASingleEventViewController.h */,
 				251B54BB16B37CE900518258 /* MASingleEventViewController.m */,
 				251B54BC16B37CE900518258 /* MASingleEventViewController.xib */,
@@ -276,7 +276,7 @@
 				255E305816B35ECA003CA4FD /* MAEventCreationViewController.m in Sources */,
 				251B54BD16B37CE900518258 /* MASingleEventViewController.m in Sources */,
 				25F677D216B386FD00365BD2 /* MAProfileViewController.m in Sources */,
-				2559D80C16B38F3700A08A66 /* MAFeedViewCell.m in Sources */,
+				2559D80C16B38F3700A08A66 /* MAEventViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

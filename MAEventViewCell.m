@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 hedrick.tyler. All rights reserved.
 //
 
-#import "MAFeedViewCell.h"
+#import "MAEventViewCell.h"
 
 @implementation MAEventViewCell
 @synthesize eventDetails, eventTitle, timeLabel, eventDate;
@@ -27,11 +27,34 @@
 
 - (void)setupLabels
 {
+    UIFont *titleFont = [UIFont fontWithName:@"Droid Sans" size:18];
+    UIFont *detailsFont = [UIFont fontWithName:@"Droid Sans" size:12];
+    UIFont *dateFont = [UIFont fontWithName:@"Droid Sans" size:16];
+    UIFont *timeFont = [UIFont fontWithName:@"Droid Sans" size:36];
+    
     // Title
     [eventTitle setText:[object objectForKey:@"name"]];
     [eventTitle setBackgroundColor:[UIColor clearColor]];
     [eventTitle setTextColor:[UIColor colorWithRed:136 green:136 blue:136 alpha:1]];
+    [eventTitle setFont:titleFont];
     
+    // Details
+    [eventDetails setText:[object objectForKey:@"details"]];
+    [eventDetails setBackgroundColor:[UIColor clearColor]];
+    [eventDetails setTextColor:[UIColor colorWithRed:136 green:136 blue:136 alpha:1]];
+    [eventDetails setFont:detailsFont];
+    
+    // Date
+    [eventDate setText:[object objectForKey:@"date"]];
+    [eventDate setBackgroundColor:[UIColor clearColor]];
+    [eventDate setTextColor:[UIColor colorWithRed:136 green:136 blue:136 alpha:1]];
+    [eventDate setFont:dateFont];
+    
+    // Time
+    [timeLabel setText:[object objectForKey:@"time"]];
+    [timeLabel setBackgroundColor:[UIColor clearColor]];
+    [timeLabel setTextColor:[UIColor colorWithRed:136 green:136 blue:136 alpha:1]];
+    [timeLabel setFont:timeFont];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
