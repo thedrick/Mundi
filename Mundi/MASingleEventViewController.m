@@ -25,6 +25,11 @@
     return self;
 }
 
+- (void)loadView
+{
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -42,7 +47,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.tabBarController.navigationItem.title = [object objectForKey:@"name"];
+    self.navigationItem.title = [object objectForKey:@"name"];
 }
 
 - (void)didReceiveMemoryWarning

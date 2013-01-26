@@ -8,22 +8,26 @@
 
 #import "MAEventCreationViewController.h"
 #import <Parse/Parse.h>
+#import "MACreateEventView.h"
 
 @interface MAEventCreationViewController ()
 
 @end
 
 @implementation MAEventCreationViewController
-@synthesize eventName, eventDetails, picker, location;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        UIDatePicker *dp = [[UIDatePicker alloc] init];
-        self.picker = dp;
     }
     return self;
+}
+
+- (void)loadView
+{
+    MACreateEventView *createView = [[MACreateEventView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    self.view = createView;
 }
 
 - (void)viewDidLoad
@@ -59,10 +63,8 @@
         time = nil;
     }
     //Add the picker to the view
-    [self.view addSubview:self.picker];
     
     time = [NSDate dateWithTimeIntervalSinceNow:20];
-    [self.picker removeFromSuperview];
 }
 
 - (IBAction)eventCategory:(id)sender
@@ -72,8 +74,6 @@
 
 - (IBAction)createEvent:(id)sender
 {
-    locationString = self.location.text;
-    name = self.eventName.text;
     if (!time || !locationString || !category || !name) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event Invalid"
                                                         message:@"Make sure you fill out all fields"
@@ -87,7 +87,6 @@
         [newEvent setObject:locationString forKey:@"locationString"];
         [newEvent setObject:category forKey:@"category"];
         [newEvent setObject:time forKey:@"date"];
-        [newEvent setObject:self.eventDetails.text forKey:@"details"];
         [newEvent saveEventually];
     }
 }

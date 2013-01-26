@@ -15,10 +15,6 @@
     NSString *locationString;
     NSString *category;
 }
-@property (weak, nonatomic) IBOutlet UITextField *eventName;
-@property (weak, nonatomic) IBOutlet UITextView *eventDetails;
-@property (weak, nonatomic) IBOutlet UITextField *location;
-@property (strong, nonatomic) UIDatePicker *picker;
 - (IBAction)eventDate:(id)sender;
 - (IBAction)eventCategory:(id)sender;
 - (IBAction)createEvent:(id)sender;

@@ -12,6 +12,7 @@
 #import "MAProfileViewController.h"
 #import "MAEventViewController.h"
 #import "MAMainNavController.h"
+#import "MAEventCreationViewController.h"
 
 @implementation MAAppDelegate
 
@@ -39,10 +40,10 @@
     [PFFacebookUtils initializeWithApplicationId:@"294970237291608"];
         
     MAEventViewController *eventViewController = [[MAEventViewController alloc] initWithStyle:UITableViewStylePlain];
-    MAProfileViewController *profieViewController = [[MAProfileViewController alloc] init];
+    MAEventCreationViewController *eventCreation = [[MAEventCreationViewController alloc] init];
     
     MATabNavigation *tabController = [[MATabNavigation alloc] init];
-    [tabController setViewControllers:[NSArray arrayWithObjects:eventViewController, profieViewController, nil]];
+    [tabController setViewControllers:[NSArray arrayWithObjects:eventViewController, eventCreation, nil]];
     MAMainNavController *navController = [[MAMainNavController alloc] initWithRootViewController:tabController];
     self.window.rootViewController = navController;
     

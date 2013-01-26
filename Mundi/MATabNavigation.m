@@ -15,6 +15,10 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabbarbkgd.png"]];
+        [[UITabBar appearance] setSelectedImageTintColor:[UIColor clearColor]];
+        [[UITabBar appearance] setTintColor:[UIColor clearColor]];
+        [[UITabBar appearance] setSelectionIndicatorImage:nil];
     }
     return self;
 }

@@ -24,6 +24,8 @@
     if (self) {
         UITabBarItem *tbi = [self tabBarItem];
         [tbi setTitle:@"Explore"];
+        self.tableView.backgroundView = nil;
+        self.tableView.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1];
     }
     return self;
 }
@@ -80,7 +82,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 90;
+    return 80;
 }
 
 #pragma mark - Table view data source
@@ -90,11 +92,11 @@
     if (section != 0) {
         return [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
     }
-    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 10, 320, 90)];
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 110)];
     [titleView setBackgroundColor:[UIColor clearColor]];
-    UILabel *headerTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 80)];
+    UILabel *headerTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 110)];
     [headerTitleLabel setBackgroundColor:[UIColor clearColor]];
-    [headerTitleLabel setTextColor:[UIColor colorWithRed:136 green:136 blue:136 alpha:1]];
+    [headerTitleLabel setTextColor:[UIColor colorWithRed:(136/255.0f) green:(136/255.0f) blue:(136/255.0f) alpha:1]];
     [headerTitleLabel setText:@"feed"];
     [headerTitleLabel setTextAlignment:NSTextAlignmentCenter];
     UIFont *titleFont = [UIFont fontWithName:@"Raleway" size:120];
@@ -130,7 +132,7 @@
 -(CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
 {
     if(section == 0)
-        return 80;
+        return 100;
     return 1.0;
 }
 
