@@ -24,7 +24,6 @@
 		252E514016B34F280057D2D1 /* MATabNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 252E513F16B34F280057D2D1 /* MATabNavigation.m */; };
 		255E304916B3548F003CA4FD /* MAMainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E304816B3548F003CA4FD /* MAMainNavController.m */; };
 		255E304D16B35673003CA4FD /* MAEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E304C16B35673003CA4FD /* MAEventViewController.m */; };
-		255E305016B3569E003CA4FD /* MAProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E304F16B3569E003CA4FD /* MAProfileViewController.m */; };
 		255E305816B35ECA003CA4FD /* MAEventCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E305616B35ECA003CA4FD /* MAEventCreationViewController.m */; };
 		255E305916B35ECA003CA4FD /* MAEventCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 255E305716B35ECA003CA4FD /* MAEventCreationViewController.xib */; };
 		25CFF68716B34C25002E4913 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68616B34C25002E4913 /* UIKit.framework */; };
@@ -36,6 +35,7 @@
 		25CFF69916B34C25002E4913 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69816B34C25002E4913 /* Default.png */; };
 		25CFF69B16B34C25002E4913 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69A16B34C25002E4913 /* Default@2x.png */; };
 		25CFF69D16B34C25002E4913 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69C16B34C25002E4913 /* Default-568h@2x.png */; };
+		2A722F1E16B3828E00A3612F /* MAProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A722F1C16B3828E00A3612F /* MAProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,8 +59,6 @@
 		255E304816B3548F003CA4FD /* MAMainNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMainNavController.m; sourceTree = "<group>"; };
 		255E304B16B35673003CA4FD /* MAEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAEventViewController.h; sourceTree = "<group>"; };
 		255E304C16B35673003CA4FD /* MAEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAEventViewController.m; sourceTree = "<group>"; };
-		255E304E16B3569D003CA4FD /* MAProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProfileViewController.h; sourceTree = "<group>"; };
-		255E304F16B3569E003CA4FD /* MAProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProfileViewController.m; sourceTree = "<group>"; };
 		255E305516B35EC9003CA4FD /* MAEventCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAEventCreationViewController.h; sourceTree = "<group>"; };
 		255E305616B35ECA003CA4FD /* MAEventCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAEventCreationViewController.m; sourceTree = "<group>"; };
 		255E305716B35ECA003CA4FD /* MAEventCreationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MAEventCreationViewController.xib; sourceTree = "<group>"; };
@@ -77,6 +75,7 @@
 		25CFF69816B34C25002E4913 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		25CFF69A16B34C25002E4913 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		25CFF69C16B34C25002E4913 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		2A722F1C16B3828E00A3612F /* MAProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MAProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +161,7 @@
 				252E513F16B34F280057D2D1 /* MATabNavigation.m */,
 				255E304B16B35673003CA4FD /* MAEventViewController.h */,
 				255E304C16B35673003CA4FD /* MAEventViewController.m */,
-				255E304E16B3569D003CA4FD /* MAProfileViewController.h */,
-				255E304F16B3569E003CA4FD /* MAProfileViewController.m */,
+				2A722F1C16B3828E00A3612F /* MAProfileViewController.xib */,
 				25CFF68D16B34C25002E4913 /* Supporting Files */,
 			);
 			path = Mundi;
@@ -240,6 +238,7 @@
 				25CFF69B16B34C25002E4913 /* Default@2x.png in Resources */,
 				25CFF69D16B34C25002E4913 /* Default-568h@2x.png in Resources */,
 				255E305916B35ECA003CA4FD /* MAEventCreationViewController.xib in Resources */,
+				2A722F1E16B3828E00A3612F /* MAProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +254,6 @@
 				252E514016B34F280057D2D1 /* MATabNavigation.m in Sources */,
 				255E304916B3548F003CA4FD /* MAMainNavController.m in Sources */,
 				255E304D16B35673003CA4FD /* MAEventViewController.m in Sources */,
-				255E305016B3569E003CA4FD /* MAProfileViewController.m in Sources */,
 				255E305816B35ECA003CA4FD /* MAEventCreationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
