@@ -156,12 +156,23 @@
 - (IBAction)joinEvent:(id)sender {
 }
 
+<<<<<<< HEAD
 - (IBAction)viewAttendees:(id)sender
 {
     PFUser *user = [PFUser currentUser];
     
     NSString *attendees = [object objectForKey:@"attendees"];
     NSArray *eventAttendees;
+=======
+- (IBAction)viewAttendees:(id)sender {
+    PFUser *user = [PFUser currentUser];
+    PFObject *event = object;
+    
+    NSString *eventId = event.objectId;
+    NSString *attendees = [event objectForKey:@"attendees"];
+    NSArray *eventAttendees = [[NSArray alloc] init];
+>>>>>>> 4ffea9a913b21790b4195d83d0acbc68dd9df4ba
+    
     if(attendees == nil){
         //creator is only attendee
         eventAttendees = [NSArray arrayWithObjects:user.objectId, nil];
@@ -169,9 +180,12 @@
         NSString *attendeesOnly = [attendees stringByReplacingOccurrencesOfString:@", " withString:@" "];
         eventAttendees = [attendeesOnly componentsSeparatedByString:@" "];
     }
+<<<<<<< HEAD
     MAAttendeesViewController *attendeesVC = [[MAAttendeesViewController alloc] initWithAttendees:eventAttendees];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self.navigationController pushViewController:attendeesVC animated:YES];
+=======
+>>>>>>> 4ffea9a913b21790b4195d83d0acbc68dd9df4ba
 }
 
 @end

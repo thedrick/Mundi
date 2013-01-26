@@ -11,6 +11,7 @@
 
 @implementation MACreateEventView
 @synthesize addLabel, eventName, date, time, location, category, details, nextButton, backButton;
+@synthesize inviteButton;
 
 - (id)initWithFrame:(CGRect)frame
 {
