@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *eventTime;
 @property (weak, nonatomic) IBOutlet UILabel *eventCategory;
 @property (weak, nonatomic) IBOutlet UILabel *eventDetails;
+@property (weak, nonatomic) IBOutlet UIButton *updateAttendanceButton;
 
 - (IBAction)eventAttendees:(id)sender;
 - (IBAction)updateAttendance:(id)sender;
