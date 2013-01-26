@@ -36,8 +36,8 @@
     [self.logInView.externalLogInLabel setTextColor: [UIColor darkGrayColor ]];
     [self.logInView.signUpLabel setTextColor: [UIColor darkGrayColor ]];
     
-    [self.logInView.externalLogInLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:14.0]];
-    [self.logInView.signUpLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:14.0]];
+    [self.logInView.externalLogInLabel setFont:[UIFont fontWithName:@"DroidSans" size:14.0]];
+    [self.logInView.signUpLabel setFont:[UIFont fontWithName:@"DroidSans" size:14.0]];
     
     // Add login field background
     [self.logInView.usernameField setBackgroundColor:[UIColor whiteColor]];

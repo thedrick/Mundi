@@ -77,7 +77,6 @@
     } else if([eventCategory isEqualToString:@"Outdoors"]) {
         [timeLabel setTextColor:red];
     }
-    
 
     [self.contentView addSubview:eventTitle];
     [self.contentView addSubview:eventDetails];
