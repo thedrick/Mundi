@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		251B54BD16B37CE900518258 /* MASingleEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 251B54BB16B37CE900518258 /* MASingleEventViewController.m */; };
 		251B54BE16B37CE900518258 /* MASingleEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 251B54BC16B37CE900518258 /* MASingleEventViewController.xib */; };
+		252C766E16B3A7E300E14940 /* raleway_thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 252C766D16B3A7E300E14940 /* raleway_thin.ttf */; };
 		252E512216B34D2E0057D2D1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512116B34D2E0057D2D1 /* Parse.framework */; };
 		252E513116B34D9D0057D2D1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512416B34D9D0057D2D1 /* Accounts.framework */; };
 		252E513216B34D9D0057D2D1 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512516B34D9D0057D2D1 /* AdSupport.framework */; };
@@ -24,7 +25,7 @@
 		252E513C16B34D9D0057D2D1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512F16B34D9D0057D2D1 /* StoreKit.framework */; };
 		252E513D16B34D9D0057D2D1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E513016B34D9D0057D2D1 /* SystemConfiguration.framework */; };
 		252E514016B34F280057D2D1 /* MATabNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 252E513F16B34F280057D2D1 /* MATabNavigation.m */; };
-		2559D80C16B38F3700A08A66 /* MAFeedViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2559D80B16B38F3700A08A66 /* MAFeedViewCell.m */; };
+		2559D80C16B38F3700A08A66 /* MAEventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2559D80B16B38F3700A08A66 /* MAEventViewCell.m */; };
 		2559D81316B397AB00A08A66 /* DroidSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2559D81216B397AB00A08A66 /* DroidSans.ttf */; };
 		255E304916B3548F003CA4FD /* MAMainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E304816B3548F003CA4FD /* MAMainNavController.m */; };
 		255E304D16B35673003CA4FD /* MAEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E304C16B35673003CA4FD /* MAEventViewController.m */; };
@@ -47,6 +48,7 @@
 		251B54BA16B37CE900518258 /* MASingleEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASingleEventViewController.h; sourceTree = "<group>"; };
 		251B54BB16B37CE900518258 /* MASingleEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASingleEventViewController.m; sourceTree = "<group>"; };
 		251B54BC16B37CE900518258 /* MASingleEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASingleEventViewController.xib; sourceTree = "<group>"; };
+		252C766D16B3A7E300E14940 /* raleway_thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = raleway_thin.ttf; sourceTree = "<group>"; };
 		252E512116B34D2E0057D2D1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		252E512416B34D9D0057D2D1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		252E512516B34D9D0057D2D1 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -63,9 +65,8 @@
 		252E513016B34D9D0057D2D1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		252E513E16B34F280057D2D1 /* MATabNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATabNavigation.h; sourceTree = "<group>"; };
 		252E513F16B34F280057D2D1 /* MATabNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATabNavigation.m; sourceTree = "<group>"; };
-		2559D80A16B38F3700A08A66 /* MAFeedViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAFeedViewCell.h; path = ../MAFeedViewCell.h; sourceTree = "<group>"; };
-		2559D80B16B38F3700A08A66 /* MAFeedViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAFeedViewCell.m; path = ../MAFeedViewCell.m; sourceTree = "<group>"; };
-		2559D81116B3979700A08A66 /* Raleway Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway Thin.ttf"; sourceTree = "<group>"; };
+		2559D80A16B38F3700A08A66 /* MAEventViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAEventViewCell.h; path = ../MAEventViewCell.h; sourceTree = "<group>"; };
+		2559D80B16B38F3700A08A66 /* MAEventViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAEventViewCell.m; path = ../MAEventViewCell.m; sourceTree = "<group>"; };
 		2559D81216B397AB00A08A66 /* DroidSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSans.ttf; sourceTree = "<group>"; };
 		255E304716B3548F003CA4FD /* MAMainNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMainNavController.h; sourceTree = "<group>"; };
 		255E304816B3548F003CA4FD /* MAMainNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMainNavController.m; sourceTree = "<group>"; };
@@ -175,8 +176,8 @@
 				252E513F16B34F280057D2D1 /* MATabNavigation.m */,
 				255E304B16B35673003CA4FD /* MAEventViewController.h */,
 				255E304C16B35673003CA4FD /* MAEventViewController.m */,
-				2559D80A16B38F3700A08A66 /* MAFeedViewCell.h */,
-				2559D80B16B38F3700A08A66 /* MAFeedViewCell.m */,
+				2559D80A16B38F3700A08A66 /* MAEventViewCell.h */,
+				2559D80B16B38F3700A08A66 /* MAEventViewCell.m */,
 				251B54BA16B37CE900518258 /* MASingleEventViewController.h */,
 				251B54BB16B37CE900518258 /* MASingleEventViewController.m */,
 				251B54BC16B37CE900518258 /* MASingleEventViewController.xib */,
@@ -191,7 +192,7 @@
 		25CFF68D16B34C25002E4913 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2559D81116B3979700A08A66 /* Raleway Thin.ttf */,
+				252C766D16B3A7E300E14940 /* raleway_thin.ttf */,
 				2559D81216B397AB00A08A66 /* DroidSans.ttf */,
 				25CFF68E16B34C25002E4913 /* Mundi-Info.plist */,
 				25CFF68F16B34C25002E4913 /* InfoPlist.strings */,
@@ -264,6 +265,7 @@
 				251B54BE16B37CE900518258 /* MASingleEventViewController.xib in Resources */,
 				25F677D316B386FD00365BD2 /* MAProfileViewController.xib in Resources */,
 				2559D81316B397AB00A08A66 /* DroidSans.ttf in Resources */,
+				252C766E16B3A7E300E14940 /* raleway_thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +284,7 @@
 				255E305816B35ECA003CA4FD /* MAEventCreationViewController.m in Sources */,
 				251B54BD16B37CE900518258 /* MASingleEventViewController.m in Sources */,
 				25F677D216B386FD00365BD2 /* MAProfileViewController.m in Sources */,
-				2559D80C16B38F3700A08A66 /* MAFeedViewCell.m in Sources */,
+				2559D80C16B38F3700A08A66 /* MAEventViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

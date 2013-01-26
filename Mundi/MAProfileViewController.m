@@ -13,6 +13,7 @@
 @end
 
 @implementation MAProfileViewController
+@synthesize username, userPicture;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,4 +37,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)settings:(id)sender {
+}
+
+- (IBAction)userEvents:(id)sender {
+}
+
+- (IBAction)userGroups:(id)sender {
+}
 @end

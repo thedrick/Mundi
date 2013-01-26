@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "MAEventCreationViewController.h"
 #import "MASingleEventViewController.h"
+#import "MAEventViewCell.h"
 
 @interface MAEventViewController ()
 
@@ -52,7 +53,7 @@
     [query setCachePolicy:kPFCachePolicyCacheThenNetwork];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
-            NSLog(@"Eror: %@", [error localizedDescription]);
+            NSLog(@"Error: %@", [error localizedDescription]);
         } else {
             events = objects;
             [self.tableView reloadData];
@@ -79,25 +80,24 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80;
+    return 90;
 }
 
 #pragma mark - Table view data source
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    NSLog(@"Section: %d", section);
     if (section != 0) {
-        return nil;
+        return [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
     }
-    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 80)];
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 10, 320, 90)];
     [titleView setBackgroundColor:[UIColor clearColor]];
     UILabel *headerTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 80)];
     [headerTitleLabel setBackgroundColor:[UIColor clearColor]];
     [headerTitleLabel setTextColor:[UIColor colorWithRed:136 green:136 blue:136 alpha:1]];
     [headerTitleLabel setText:@"feed"];
     [headerTitleLabel setTextAlignment:NSTextAlignmentCenter];
-    UIFont *titleFont = [UIFont fontWithName:@"Raleway Thin" size:60];
+    UIFont *titleFont = [UIFont fontWithName:@"Raleway" size:120];
     [headerTitleLabel setFont:titleFont];
     [titleView addSubview:headerTitleLabel];
     return titleView;
@@ -117,15 +117,32 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     PFObject *object = [events objectAtIndex:[indexPath section]];
-    NSString *eventName = [object objectForKey:@"name"];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EventCell"];
+    MAEventViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EventCell"];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"EventCell"];
+        cell = [[MAEventViewCell alloc] init];
     }
-    [cell.textLabel setText:eventName];
+    [cell setObject:object];
     
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if(section == 0)
+        return 80;
+    return 1.0;
+}
+
+
+-(CGFloat)tableView:(UITableView*)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 5.0;
+}
+
+-(UIView*)tableView:(UITableView*)tableView viewForFooterInSection:(NSInteger)section
+{
+    return [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
 }
 
 #pragma mark - Table view delegate
