@@ -52,7 +52,16 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         UITabBarItem *tbi = [self tabBarItem];
-        [tbi setImage:[self imageFromText:@"Profile"]];
+        [tbi setTitle: @"Profile"];
+        
+        [tbi setTitlePositionAdjustment:UIOffsetMake(0.0, -10.0)];
+        
+        [tbi setTitleTextAttributes:
+         [NSDictionary dictionaryWithObjectsAndKeys:
+          [UIColor whiteColor], UITextAttributeTextColor,
+          [UIFont fontWithName:@"HelveticaNeue" size:26.0],
+          UITextAttributeFont,
+          nil] forState:UIControlStateNormal];
     }
     return self;
 }

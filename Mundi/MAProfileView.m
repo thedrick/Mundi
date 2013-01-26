@@ -7,6 +7,7 @@
 //
 
 #import "MAProfileView.h"
+#import "UIImageView+AFNetworking.h"
 #import <Parse/Parse.h>
 
 @implementation MAProfileView
@@ -33,7 +34,6 @@
 - (void)loadContent
 {
     PFUser *user = [PFUser currentUser];
-    NSString *userId = [user objectForKey:@"facebookId"];
     NSString *pictureURL = [user objectForKey:@"pictureURL"];
     //
 //    PF_FBProfilePictureView *userProfilePicture = [[PF_FBProfilePictureView alloc] init];
@@ -41,12 +41,8 @@
 //    profilePicture = [userProfilePicture init];
     
     //    profilePicture = [userProfilePicture initWithProfileID:userId pictureCropping:PF_FBProfilePictureCroppingSquare];
-
-    NSURL *profilePictureURL = [NSURL URLWithString:pictureURL];
-    NSData *imageData = [NSData dataWithContentsOfURL:profilePictureURL];
-    UIImage *image = [UIImage imageWithData:imageData];
     
-    [profilePicture setImage:image];
+    [profilePicture setImageWithURL:[NSURL URLWithString:pictureURL]];
     
     UIFont *titleFont = [UIFont fontWithName:@"Raleway" size:60];
     UIFont *locationFont = [UIFont fontWithName:@"DroidSans" size:11];
