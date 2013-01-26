@@ -87,7 +87,26 @@
         [newEvent setObject:locationString forKey:@"locationString"];
         [newEvent setObject:category forKey:@"category"];
         [newEvent setObject:time forKey:@"date"];
-        [newEvent saveEventually];
+        [newEvent setObject:@"" forKey:@"attendees"];
+        
+        PFObject *user = [PFUser currentUser];
+        NSString *userId = user.objectId;
+        NSString* userName = [user objectForKey:@"username"];
+        NSString *eventId = newEvent.objectId;
+        NSString *eventIdComma = [@", " stringByAppendingString:eventId];
+        NSString *userCreatedEvents = [user objectForKey:@"createdEvents"];
+        NSString *userCreatedEventsNew = [userCreatedEvents stringByAppendingString:eventIdComma];
+        
+        [newEvent setObject:userId forKey:@"createdBy"];
+        [newEvent setObject:userName forKey:@"creatorUsername"];
+        
+        [user setObject:userCreatedEventsNew forKey:@"createdEvents"];
+        
+        [newEvent saveInBackground];
+        [user saveInBackground];
     }
+    
+    
+    
 }
 @end
