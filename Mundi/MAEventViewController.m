@@ -9,6 +9,7 @@
 #import "MAEventViewController.h"
 #import <Parse/Parse.h>
 #import "MAEventCreationViewController.h"
+#import "MASingleEventViewController.h"
 
 @interface MAEventViewController ()
 
@@ -108,7 +109,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     PFObject *object = [events objectAtIndex:[indexPath row]];
-    
+    MASingleEventViewController *singleEvent = [[MASingleEventViewController alloc] initWithObject:object];
+    [self.navigationController pushViewController:singleEvent animated:YES];
 }
 
 @end

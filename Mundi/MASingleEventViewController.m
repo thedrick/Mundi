@@ -36,7 +36,13 @@
     [eventTime setText:[dateFormatter stringFromDate:date]];
     [eventLocation setText:[object objectForKey:@"locationString"]];
     [eventDetails setText:[object objectForKey:@"details"]];
-    [eventCategory setText:[object objectForKey:@"createdBy"]];
+    [eventCategory setText:[object objectForKey:@"creatorUsername"]];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.tabBarController.navigationItem.title = [object objectForKey:@"name"];
 }
 
 - (void)didReceiveMemoryWarning

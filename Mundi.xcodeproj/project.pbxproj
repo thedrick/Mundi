@@ -37,7 +37,8 @@
 		25CFF69916B34C25002E4913 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69816B34C25002E4913 /* Default.png */; };
 		25CFF69B16B34C25002E4913 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69A16B34C25002E4913 /* Default@2x.png */; };
 		25CFF69D16B34C25002E4913 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69C16B34C25002E4913 /* Default-568h@2x.png */; };
-		2A722F1E16B3828E00A3612F /* MAProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A722F1C16B3828E00A3612F /* MAProfileViewController.xib */; };
+		25F677D216B386FD00365BD2 /* MAProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F677D016B386FD00365BD2 /* MAProfileViewController.m */; };
+		25F677D316B386FD00365BD2 /* MAProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25F677D116B386FD00365BD2 /* MAProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,7 +81,9 @@
 		25CFF69816B34C25002E4913 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		25CFF69A16B34C25002E4913 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		25CFF69C16B34C25002E4913 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		2A722F1C16B3828E00A3612F /* MAProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MAProfileViewController.xib; sourceTree = "<group>"; };
+		25F677CF16B386FD00365BD2 /* MAProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProfileViewController.h; sourceTree = "<group>"; };
+		25F677D016B386FD00365BD2 /* MAProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProfileViewController.m; sourceTree = "<group>"; };
+		25F677D116B386FD00365BD2 /* MAProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MAProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,9 +172,9 @@
 				251B54BA16B37CE900518258 /* MASingleEventViewController.h */,
 				251B54BB16B37CE900518258 /* MASingleEventViewController.m */,
 				251B54BC16B37CE900518258 /* MASingleEventViewController.xib */,
-				255E304E16B3569D003CA4FD /* MAProfileViewController.h */,
-				255E304F16B3569E003CA4FD /* MAProfileViewController.m */,
-				2A722F1C16B3828E00A3612F /* MAProfileViewController.xib */,
+				25F677CF16B386FD00365BD2 /* MAProfileViewController.h */,
+				25F677D016B386FD00365BD2 /* MAProfileViewController.m */,
+				25F677D116B386FD00365BD2 /* MAProfileViewController.xib */,
 				25CFF68D16B34C25002E4913 /* Supporting Files */,
 			);
 			path = Mundi;
@@ -249,7 +252,7 @@
 				25CFF69D16B34C25002E4913 /* Default-568h@2x.png in Resources */,
 				255E305916B35ECA003CA4FD /* MAEventCreationViewController.xib in Resources */,
 				251B54BE16B37CE900518258 /* MASingleEventViewController.xib in Resources */,
-				2A722F1E16B3828E00A3612F /* MAProfileViewController.xib in Resources */,
+				25F677D316B386FD00365BD2 /* MAProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +270,7 @@
 				255E304D16B35673003CA4FD /* MAEventViewController.m in Sources */,
 				255E305816B35ECA003CA4FD /* MAEventCreationViewController.m in Sources */,
 				251B54BD16B37CE900518258 /* MASingleEventViewController.m in Sources */,
+				25F677D216B386FD00365BD2 /* MAProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

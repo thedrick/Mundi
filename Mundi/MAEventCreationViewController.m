@@ -88,7 +88,7 @@
         [newEvent setObject:category forKey:@"category"];
         [newEvent setObject:time forKey:@"date"];
         [newEvent setObject:self.eventDetails.text forKey:@"details"];
-        [newEvent save];
+        [newEvent saveEventually];
     }
 }
 @end

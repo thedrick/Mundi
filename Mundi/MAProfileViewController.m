@@ -2,7 +2,7 @@
 //  MAProfileViewController.m
 //  Mundi
 //
-//  Created by Mitra Raman on 1/25/13.
+//  Created by Tyler Hedrick on 1/25/13.
 //  Copyright (c) 2013 hedrick.tyler. All rights reserved.
 //
 
@@ -18,7 +18,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        UITabBarItem *tbi = [self tabBarItem];
+        [tbi setTitle:@"Profile"];
     }
     return self;
 }
@@ -29,16 +30,10 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)viewDidUnload
+- (void)didReceiveMemoryWarning
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end
