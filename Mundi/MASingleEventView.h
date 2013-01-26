@@ -19,5 +19,5 @@
 @property (nonatomic, strong) UIView *eventDetailView;
 @property (nonatomic, strong) UIView *photoCollectionView;
 @property (nonatomic, strong) UIButton *joinButton;
-
+@property (nonatomic, strong) UIButton *attendeesButton;
 @end
