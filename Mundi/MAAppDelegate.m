@@ -15,13 +15,29 @@
 
 @implementation MAAppDelegate
 
+//- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+//    [imageData appendData:data];
+//}
+//
+//- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+//    headerImageView.image = [UIImage imageWithData:imageData];
+//}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [PFFacebookUtils handleOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation { return [PFFacebookUtils handleOpenURL:url];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     [Parse setApplicationId:@"QIxv8vjLzNni3w9UTbHEMu5tskz03ApKOuAAxgxE"
                   clientKey:@"KlZQuRozbWdWgXIOZOXDIfXG89eft2V9bdVkpJrV"];
-    
+    [PFFacebookUtils initializeWithApplicationId:@"294970237291608"];
+        
     MAEventViewController *eventViewController = [[MAEventViewController alloc] initWithStyle:UITableViewStylePlain];
     MAProfileViewController *profieViewController = [[MAProfileViewController alloc] init];
     
@@ -49,8 +65,11 @@
         [navController presentViewController:logInViewController animated:YES completion:NULL];
     }
     
+    
+    
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

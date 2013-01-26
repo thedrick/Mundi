@@ -23,8 +23,10 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+<<<<<<< HEAD
 			<key>fb_app_id</key>
 			<string>fb294970237291608</string>
+=======
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
@@ -33,6 +35,7 @@
 			<array>
 				<string>fb294970237291608</string>
 			</array>
+>>>>>>> 7669cd3b7855a0d025ad5679545296ce0c24437a
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>

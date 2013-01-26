@@ -11,4 +11,5 @@
 
 @interface MAMainNavController : UINavigationController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
+@property (strong, nonatomic) NSData *imageData;
 @end
