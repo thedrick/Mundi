@@ -34,6 +34,7 @@
     eventView.locationLabel.text = [object objectForKey:@"locationString"];
     eventView.creatorLabel.text = [object objectForKey:@"creatorUsername"];
     eventView.timeLabel.text = [object objectForKey:@"time"];
+    eventView.dateLabel.text = [object objectForKey:@"date"];
     eventView.detailLabel.text = [object objectForKey:@"details"];
     self.view = eventView;
 }
@@ -42,7 +43,6 @@
 {
     [super viewDidLoad];
     [eventName setText:[object objectForKey:@"name"]];
-    NSString *date = [object objectForKey:@"date"];
     [eventLocation setText:[object objectForKey:@"locationString"]];
     [eventDetails setText:[object objectForKey:@"details"]];
     [eventCategory setText:[object objectForKey:@"category"]];
