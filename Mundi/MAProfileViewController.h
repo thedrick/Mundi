@@ -15,6 +15,6 @@
 
 - (IBAction)settings:(id)sender;
 - (IBAction)userEvents:(id)sender;
-- (IBAction)userGroups:(id)sender;
+- (IBAction)userFriends:(id)sender;
 
 @end

@@ -102,7 +102,7 @@
     groupsLabel.backgroundColor = [UIColor clearColor];
     groupsLabel.font = buttonFont;
     groupsLabel.textColor = fontColor;
-    groupsLabel.text = @"MY GROUPS";
+    groupsLabel.text = @"MY FRIENDS";
     groupsLabel.textAlignment = NSTextAlignmentCenter;
     myGroupsButton.layer.borderWidth = 0.5f;
     myGroupsButton.layer.cornerRadius = 6;

@@ -91,6 +91,6 @@
 - (IBAction)userEvents:(id)sender {
 }
 
-- (IBAction)userGroups:(id)sender {
+- (IBAction)userFriends:(id)sender {
 }
 @end
