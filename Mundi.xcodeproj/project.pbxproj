@@ -25,6 +25,7 @@
 		252E513D16B34D9D0057D2D1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E513016B34D9D0057D2D1 /* SystemConfiguration.framework */; };
 		252E514016B34F280057D2D1 /* MATabNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 252E513F16B34F280057D2D1 /* MATabNavigation.m */; };
 		2559D80C16B38F3700A08A66 /* MAFeedViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2559D80B16B38F3700A08A66 /* MAFeedViewCell.m */; };
+		2559D81316B397AB00A08A66 /* DroidSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2559D81216B397AB00A08A66 /* DroidSans.ttf */; };
 		255E304916B3548F003CA4FD /* MAMainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E304816B3548F003CA4FD /* MAMainNavController.m */; };
 		255E304D16B35673003CA4FD /* MAEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E304C16B35673003CA4FD /* MAEventViewController.m */; };
 		255E305816B35ECA003CA4FD /* MAEventCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E305616B35ECA003CA4FD /* MAEventCreationViewController.m */; };
@@ -64,6 +65,8 @@
 		252E513F16B34F280057D2D1 /* MATabNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATabNavigation.m; sourceTree = "<group>"; };
 		2559D80A16B38F3700A08A66 /* MAFeedViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAFeedViewCell.h; path = ../MAFeedViewCell.h; sourceTree = "<group>"; };
 		2559D80B16B38F3700A08A66 /* MAFeedViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAFeedViewCell.m; path = ../MAFeedViewCell.m; sourceTree = "<group>"; };
+		2559D81116B3979700A08A66 /* Raleway Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway Thin.ttf"; sourceTree = "<group>"; };
+		2559D81216B397AB00A08A66 /* DroidSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSans.ttf; sourceTree = "<group>"; };
 		255E304716B3548F003CA4FD /* MAMainNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMainNavController.h; sourceTree = "<group>"; };
 		255E304816B3548F003CA4FD /* MAMainNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMainNavController.m; sourceTree = "<group>"; };
 		255E304B16B35673003CA4FD /* MAEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAEventViewController.h; sourceTree = "<group>"; };
@@ -188,6 +191,8 @@
 		25CFF68D16B34C25002E4913 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2559D81116B3979700A08A66 /* Raleway Thin.ttf */,
+				2559D81216B397AB00A08A66 /* DroidSans.ttf */,
 				25CFF68E16B34C25002E4913 /* Mundi-Info.plist */,
 				25CFF68F16B34C25002E4913 /* InfoPlist.strings */,
 				25CFF69216B34C25002E4913 /* main.m */,
@@ -258,6 +263,7 @@
 				255E305916B35ECA003CA4FD /* MAEventCreationViewController.xib in Resources */,
 				251B54BE16B37CE900518258 /* MASingleEventViewController.xib in Resources */,
 				25F677D316B386FD00365BD2 /* MAProfileViewController.xib in Resources */,
+				2559D81316B397AB00A08A66 /* DroidSans.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

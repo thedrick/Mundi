@@ -19,7 +19,7 @@
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithStyle:style];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         UITabBarItem *tbi = [self tabBarItem];
         [tbi setTitle:@"Explore"];
@@ -79,20 +79,44 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60;
+    return 80;
 }
 
 #pragma mark - Table view data source
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    NSLog(@"Section: %d", section);
+    if (section != 0) {
+        return nil;
+    }
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 80)];
+    [titleView setBackgroundColor:[UIColor clearColor]];
+    UILabel *headerTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 80)];
+    [headerTitleLabel setBackgroundColor:[UIColor clearColor]];
+    [headerTitleLabel setTextColor:[UIColor colorWithRed:136 green:136 blue:136 alpha:1]];
+    [headerTitleLabel setText:@"feed"];
+    [headerTitleLabel setTextAlignment:NSTextAlignmentCenter];
+    UIFont *titleFont = [UIFont fontWithName:@"Raleway Thin" size:60];
+    [headerTitleLabel setFont:titleFont];
+    [titleView addSubview:headerTitleLabel];
+    return titleView;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [events count];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [events count];
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PFObject *object = [events objectAtIndex:[indexPath row]];
+    PFObject *object = [events objectAtIndex:[indexPath section]];
     NSString *eventName = [object objectForKey:@"name"];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EventCell"];
