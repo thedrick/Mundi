@@ -69,6 +69,7 @@
 		2A0F98F716B4520D00A4012C /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F98EC16B4520D00A4012C /* AFURLConnectionOperation.m */; };
 		2A0F98F816B4520D00A4012C /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F98EE16B4520D00A4012C /* AFXMLRequestOperation.m */; };
 		2A0F98F916B4520D00A4012C /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F98F016B4520D00A4012C /* UIImageView+AFNetworking.m */; };
+		2A0F991F16B488A500A4012C /* MAMyEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F991E16B488A500A4012C /* MAMyEventViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,6 +162,8 @@
 		2A0F98EE16B4520D00A4012C /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		2A0F98EF16B4520D00A4012C /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		2A0F98F016B4520D00A4012C /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		2A0F991D16B488A500A4012C /* MAMyEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMyEventViewController.h; sourceTree = "<group>"; };
+		2A0F991E16B488A500A4012C /* MAMyEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMyEventViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +230,8 @@
 				0011B22B16B43E6D0088040B /* MySignUpViewController.m */,
 				25C3211C16B472DE003C9D92 /* MAAttendeesViewController.h */,
 				25C3211D16B472DE003C9D92 /* MAAttendeesViewController.m */,
+				2A0F991D16B488A500A4012C /* MAMyEventViewController.h */,
+				2A0F991E16B488A500A4012C /* MAMyEventViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 				2A0F98F816B4520D00A4012C /* AFXMLRequestOperation.m in Sources */,
 				2A0F98F916B4520D00A4012C /* UIImageView+AFNetworking.m in Sources */,
 				25C3211E16B472DE003C9D92 /* MAAttendeesViewController.m in Sources */,
+				2A0F991F16B488A500A4012C /* MAMyEventViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
