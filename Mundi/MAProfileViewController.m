@@ -29,6 +29,8 @@
     else
         // iOS is < 4.0
         UIGraphicsBeginImageContext(size);
+    CGContextRef currentContext = UIGraphicsGetCurrentContext();
+    CGContextSetRGBFillColor(currentContext, 1.0,1.0,1.0,1.0);
     
     // optional: add a shadow, to avoid clipping the shadow you should make the context size bigger
     //

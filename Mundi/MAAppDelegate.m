@@ -58,6 +58,7 @@
         [logInViewController setDelegate:navController]; // Set ourselves as the delegate
         
         // Create the sign up view controller
+        [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"user_about_me", @"email", @"friends_photos", nil]];
         PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
         [signUpViewController setDelegate:navController]; // Set ourselves as the delegate
         
