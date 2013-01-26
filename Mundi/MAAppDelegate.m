@@ -52,6 +52,7 @@
     if (![PFUser currentUser]) { // No user logged in
         // Create the log in view controller
         PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+        logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsFacebook;
         [logInViewController setDelegate:navController]; // Set ourselves as the delegate
         
         // Create the sign up view controller
