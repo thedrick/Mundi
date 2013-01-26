@@ -8,6 +8,7 @@
 
 #import "MAEventViewController.h"
 #import <Parse/Parse.h>
+#import "MAEventCreationViewController.h"
 
 @interface MAEventViewController ()
 
@@ -34,11 +35,20 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                         target:self
+                                                                         action:@selector(addEvent:)];
+    [[self.tabBarController navigationItem] setRightBarButtonItem:bbi];
+}
+
 - (void)loadEvents
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
     [query addAscendingOrder:@"date"];
-    [query setCachePolicy:kPFCachePolicyCacheElseNetwork];
+    [query setCachePolicy:kPFCachePolicyCacheThenNetwork];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
             NSLog(@"Eror: %@", [error localizedDescription]);
@@ -46,6 +56,17 @@
             events = objects;
             [self.tableView reloadData];
         }
+    }];
+}
+
+-(IBAction)addEvent:(id)sender
+{
+    MAEventCreationViewController *eventCreation = [[MAEventCreationViewController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:eventCreation];
+    [navController setModalPresentationStyle:UIModalPresentationFormSheet];
+    
+    [self presentViewController:navController animated:YES completion:^{
+        [self.tableView reloadData];
     }];
 }
 

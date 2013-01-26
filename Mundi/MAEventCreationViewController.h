@@ -8,16 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MAEventCreationViewController : UIViewController
+@interface MAEventCreationViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
 {
     NSDate *time;
+    NSString *name;
     NSString *locationString;
     NSString *category;
 }
 @property (weak, nonatomic) IBOutlet UITextField *eventName;
 @property (weak, nonatomic) IBOutlet UITextView *eventDetails;
+@property (weak, nonatomic) IBOutlet UITextField *location;
+@property (strong, nonatomic) UIDatePicker *picker;
 - (IBAction)eventDate:(id)sender;
-- (IBAction)eventLocation:(id)sender;
 - (IBAction)eventCategory:(id)sender;
 - (IBAction)createEvent:(id)sender;
 

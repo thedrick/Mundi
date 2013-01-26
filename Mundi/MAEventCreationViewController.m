@@ -14,13 +14,14 @@
 @end
 
 @implementation MAEventCreationViewController
-@synthesize eventName, eventDetails;
+@synthesize eventName, eventDetails, picker, location;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        UIDatePicker *dp = [[UIDatePicker alloc] init];
+        self.picker = dp;
     }
     return self;
 }
@@ -29,6 +30,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(slideUpView:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(slideDownView:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,17 +40,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
+}
+
 - (IBAction)eventDate:(id)sender
 {
     if (time) {
         time = nil;
     }
+    //Add the picker to the view
+    [self.view addSubview:self.picker];
+    
     time = [NSDate dateWithTimeIntervalSinceNow:20];
-}
-
-- (IBAction)eventLocation:(id)sender
-{
-    locationString = @"My location";
+    [self.picker removeFromSuperview];
 }
 
 - (IBAction)eventCategory:(id)sender
@@ -57,7 +75,9 @@
 
 - (IBAction)createEvent:(id)sender
 {
-    if (!time || !locationString || !category) {
+    locationString = self.location.text;
+    name = self.eventName.text;
+    if (!time || !locationString || !category || !name) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event Invalid"
                                                         message:@"Make sure you fill out all fields"
                                                        delegate:nil
@@ -66,6 +86,12 @@
         [alert show];
     } else {
         PFObject *newEvent = [PFObject objectWithClassName:@"Event"];
+        [newEvent setObject:name forKey:@"name"];
+        [newEvent setObject:locationString forKey:@"locationString"];
+        [newEvent setObject:category forKey:@"category"];
+        [newEvent setObject:time forKey:@"date"];
+        [newEvent setObject:self.eventDetails.text forKey:@"details"];
+        [newEvent save];
     }
 }
 @end
