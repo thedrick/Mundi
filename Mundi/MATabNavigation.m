@@ -50,9 +50,12 @@
 
 - (void)selectedPlusButton:(id)sender
 {
+    
     MAEventCreationViewController *eventCreate = [[MAEventCreationViewController alloc] init];
-    self.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self presentViewController:eventCreate animated:YES completion:nil];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:eventCreate];
+    navController.navigationBarHidden = YES;
+    navController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
 @end
