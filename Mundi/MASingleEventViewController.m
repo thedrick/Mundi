@@ -55,5 +55,32 @@
 }
 
 - (IBAction)updateAttendance:(id)sender {
+    PFObject *user = [PFUser currentUser];
+    
+    NSString *userId = user.objectId;
+    NSString *userAttendingEvents = [user objectForKey:@"attendingEvents"];
+    
+    NSString *eventId = object.objectId;
+    NSString *eventAttendees = [object objectForKey:@"attendees"];
+    
+    NSRange result = [eventAttendees rangeOfString:userId];
+    NSString *eventAttendeesNew = @"";
+    NSString *userAttendingEventsNew = @"";
+    
+    if(result.location != NSNotFound) {
+        eventAttendeesNew = [eventAttendees stringByReplacingOccurrencesOfString:userId withString:@""];
+        [object setObject:eventAttendeesNew forKey:@"attendees"];
+        userAttendingEventsNew = [userAttendingEvents stringByReplacingOccurrencesOfString:eventId withString:@""];
+        [user setObject:userAttendingEventsNew forKey:@"attendingEvents"];
+    } else {
+        NSString *appendingUserId = [@", " stringByAppendingString:userId];
+        NSString *appendingEventId = [@", " stringByAppendingString:eventId];
+        eventAttendeesNew = [eventAttendees stringByAppendingString:appendingUserId];
+        userAttendingEventsNew = [userAttendingEvents stringByAppendingString:appendingEventId];
+    }
+    [object setObject:eventAttendeesNew forKey:@"attendees"];
+    [user setObject:userAttendingEventsNew forKey:@"attendingEvents"];
+    [object saveInBackground];
+    [user saveInBackground];
 }
 @end
