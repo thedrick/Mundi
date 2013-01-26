@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		251B54BD16B37CE900518258 /* MASingleEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 251B54BB16B37CE900518258 /* MASingleEventViewController.m */; };
+		251B54BE16B37CE900518258 /* MASingleEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 251B54BC16B37CE900518258 /* MASingleEventViewController.xib */; };
 		252E512216B34D2E0057D2D1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512116B34D2E0057D2D1 /* Parse.framework */; };
 		252E513116B34D9D0057D2D1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512416B34D9D0057D2D1 /* Accounts.framework */; };
 		252E513216B34D9D0057D2D1 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512516B34D9D0057D2D1 /* AdSupport.framework */; };
@@ -39,6 +41,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		251B54BA16B37CE900518258 /* MASingleEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASingleEventViewController.h; sourceTree = "<group>"; };
+		251B54BB16B37CE900518258 /* MASingleEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASingleEventViewController.m; sourceTree = "<group>"; };
+		251B54BC16B37CE900518258 /* MASingleEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASingleEventViewController.xib; sourceTree = "<group>"; };
 		252E512116B34D2E0057D2D1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		252E512416B34D9D0057D2D1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		252E512516B34D9D0057D2D1 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -162,6 +167,9 @@
 				252E513F16B34F280057D2D1 /* MATabNavigation.m */,
 				255E304B16B35673003CA4FD /* MAEventViewController.h */,
 				255E304C16B35673003CA4FD /* MAEventViewController.m */,
+				251B54BA16B37CE900518258 /* MASingleEventViewController.h */,
+				251B54BB16B37CE900518258 /* MASingleEventViewController.m */,
+				251B54BC16B37CE900518258 /* MASingleEventViewController.xib */,
 				255E304E16B3569D003CA4FD /* MAProfileViewController.h */,
 				255E304F16B3569E003CA4FD /* MAProfileViewController.m */,
 				25CFF68D16B34C25002E4913 /* Supporting Files */,
@@ -240,6 +248,7 @@
 				25CFF69B16B34C25002E4913 /* Default@2x.png in Resources */,
 				25CFF69D16B34C25002E4913 /* Default-568h@2x.png in Resources */,
 				255E305916B35ECA003CA4FD /* MAEventCreationViewController.xib in Resources */,
+				251B54BE16B37CE900518258 /* MASingleEventViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +266,7 @@
 				255E304D16B35673003CA4FD /* MAEventViewController.m in Sources */,
 				255E305016B3569E003CA4FD /* MAProfileViewController.m in Sources */,
 				255E305816B35ECA003CA4FD /* MAEventCreationViewController.m in Sources */,
+				251B54BD16B37CE900518258 /* MASingleEventViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

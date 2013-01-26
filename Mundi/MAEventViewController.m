@@ -107,7 +107,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"TOUCHED THE TABLE");
+    PFObject *object = [events objectAtIndex:[indexPath row]];
+    
 }
 
 @end

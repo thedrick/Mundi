@@ -13,12 +13,14 @@
 @end
 
 @implementation MASingleEventViewController
+@synthesize eventCategory, eventName, eventCreator, eventDetails, eventImage;
+@synthesize eventLocation, eventTime;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithObject:(PFObject *)obj
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithNibName:nil bundle:nil];
     if (self) {
-        // Custom initialization
+        object = obj;
     }
     return self;
 }
@@ -26,7 +28,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [eventName setText:[object objectForKey:@"name"]];
+    NSDate *date = [object objectForKey:@"date"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    [eventTime setText:[dateFormatter stringFromDate:date]];
+    [eventLocation setText:[object objectForKey:@"locationString"]];
+    [eventDetails setText:[object objectForKey:@"details"]];
+    [eventCategory setText:[object objectForKey:@"createdBy"]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +45,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)eventAttendees:(id)sender {
+}
+
+- (IBAction)updateAttendance:(id)sender {
+}
 @end
