@@ -32,6 +32,9 @@
     [createView.nextButton addTarget:self
                               action:@selector(createEvent:)
                     forControlEvents:UIControlEventTouchUpInside];
+    [createView.backButton addTarget:self
+                              action:@selector(backButtonPressed:)
+                    forControlEvents:UIControlEventTouchUpInside];
     [createView.eventName setDelegate:self];
     [createView.location setDelegate:self];
     [createView.date setDelegate:self];
@@ -39,6 +42,11 @@
     [createView.category setDelegate:self];
     [createView.time setDelegate:self];
     self.view = createView;
+}
+
+- (void)backButtonPressed:(id)sender
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewDidLoad

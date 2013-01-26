@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 @implementation MACreateEventView
-@synthesize addLabel, eventName, date, time, location, category, details, nextButton;
+@synthesize addLabel, eventName, date, time, location, category, details, nextButton, backButton;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -32,6 +32,10 @@
         nextButton.frame = CGRectMake(270, 410, 60, 60);
         nextButton.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"buttoncircle.png"]];
         
+        backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        backButton.frame = CGRectMake(-10, 410, 60, 60);
+        backButton.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"buttoncircleDown.png"]];
+        
         [self addSubview:addLabel];
         [self addSubview:eventName];
         [self addSubview:date];
@@ -40,6 +44,7 @@
         [self addSubview:category];
         [self addSubview:details];
         [self addSubview:nextButton];
+        [self addSubview:backButton];
         [self loadContent];
     }
     
@@ -101,8 +106,6 @@
     category.layer.borderWidth = 0.7f;
     category.layer.cornerRadius = 4;
     category.backgroundColor = [UIColor whiteColor];
-    
-    nextButton.titleLabel.text = @"Next";
 
     eventName.placeholder = @"Event name";
     date.placeholder = @"Date";

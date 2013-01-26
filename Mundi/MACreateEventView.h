@@ -17,4 +17,5 @@
 @property (nonatomic, strong) UITextField *category;
 @property (nonatomic, strong) UITextView *details;
 @property (nonatomic, strong) UIButton *nextButton;
+@property (nonatomic, strong) UIButton *backButton;
 @end

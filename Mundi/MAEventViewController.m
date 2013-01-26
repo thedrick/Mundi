@@ -52,6 +52,8 @@
                                                                          target:self
                                                                          action:@selector(addEvent:)];
     [[self.tabBarController navigationItem] setRightBarButtonItem:bbi];
+    self.tableView.backgroundView = nil;
+    [self.view setBackgroundColor:[UIColor colorWithWhite:0.95 alpha:1]];
 }
 
 - (void)loadEvents
