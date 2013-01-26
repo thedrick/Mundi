@@ -40,7 +40,12 @@
     [Parse setApplicationId:@"QIxv8vjLzNni3w9UTbHEMu5tskz03ApKOuAAxgxE"
                   clientKey:@"KlZQuRozbWdWgXIOZOXDIfXG89eft2V9bdVkpJrV"];
     [PFFacebookUtils initializeWithApplicationId:@"294970237291608"];
-        
+    
+    [application registerForRemoteNotificationTypes:
+     UIRemoteNotificationTypeBadge |
+     UIRemoteNotificationTypeAlert |
+     UIRemoteNotificationTypeSound];
+    
     MAEventViewController *eventViewController = [[MAEventViewController alloc] initWithStyle:UITableViewStylePlain];
     MAProfileViewController *profileController = [[MAProfileViewController alloc] init];
     
@@ -77,6 +82,20 @@
     return YES;
 }
 
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken
+{
+    NSLog(@"Subscribed for pushes");
+    [PFPush storeDeviceToken:newDeviceToken]; // Send parse the device token
+    // Subscribe this user to the broadcast channel, ""
+    [[PFInstallation currentInstallation] addUniqueObject:@"" forKey:@"channels"];
+    [[PFInstallation currentInstallation] saveEventually];
+}
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
