@@ -40,6 +40,14 @@
 		25CFF69D16B34C25002E4913 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69C16B34C25002E4913 /* Default-568h@2x.png */; };
 		25F677D216B386FD00365BD2 /* MAProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F677D016B386FD00365BD2 /* MAProfileViewController.m */; };
 		25F677D316B386FD00365BD2 /* MAProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25F677D116B386FD00365BD2 /* MAProfileViewController.xib */; };
+		2A768D9916B3A33C00A1F416 /* MAEventCreation2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A768D9716B3A33C00A1F416 /* MAEventCreation2ViewController.m */; };
+		2A768D9A16B3A33C00A1F416 /* MAEventCreation2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A768D9816B3A33C00A1F416 /* MAEventCreation2ViewController.xib */; };
+		2A768D9E16B3A50300A1F416 /* MAGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A768D9C16B3A50300A1F416 /* MAGroupsViewController.m */; };
+		2A768D9F16B3A50300A1F416 /* MAGroupsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A768D9D16B3A50300A1F416 /* MAGroupsViewController.xib */; };
+		2A768DA316B3A60700A1F416 /* MAGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A768DA116B3A60600A1F416 /* MAGroupViewController.m */; };
+		2A768DA416B3A60700A1F416 /* MAGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A768DA216B3A60600A1F416 /* MAGroupViewController.xib */; };
+		2A768DA816B3A78000A1F416 /* MASettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A768DA616B3A77F00A1F416 /* MASettingsViewController.m */; };
+		2A768DA916B3A78000A1F416 /* MASettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A768DA716B3A78000A1F416 /* MASettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +95,18 @@
 		25F677CF16B386FD00365BD2 /* MAProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProfileViewController.h; sourceTree = "<group>"; };
 		25F677D016B386FD00365BD2 /* MAProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProfileViewController.m; sourceTree = "<group>"; };
 		25F677D116B386FD00365BD2 /* MAProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MAProfileViewController.xib; sourceTree = "<group>"; };
+		2A768D9616B3A33C00A1F416 /* MAEventCreation2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAEventCreation2ViewController.h; sourceTree = "<group>"; };
+		2A768D9716B3A33C00A1F416 /* MAEventCreation2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAEventCreation2ViewController.m; sourceTree = "<group>"; };
+		2A768D9816B3A33C00A1F416 /* MAEventCreation2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MAEventCreation2ViewController.xib; sourceTree = "<group>"; };
+		2A768D9B16B3A50300A1F416 /* MAGroupsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAGroupsViewController.h; sourceTree = "<group>"; };
+		2A768D9C16B3A50300A1F416 /* MAGroupsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAGroupsViewController.m; sourceTree = "<group>"; };
+		2A768D9D16B3A50300A1F416 /* MAGroupsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MAGroupsViewController.xib; sourceTree = "<group>"; };
+		2A768DA016B3A60600A1F416 /* MAGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAGroupViewController.h; sourceTree = "<group>"; };
+		2A768DA116B3A60600A1F416 /* MAGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAGroupViewController.m; sourceTree = "<group>"; };
+		2A768DA216B3A60600A1F416 /* MAGroupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MAGroupViewController.xib; sourceTree = "<group>"; };
+		2A768DA516B3A77F00A1F416 /* MASettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASettingsViewController.h; sourceTree = "<group>"; };
+		2A768DA616B3A77F00A1F416 /* MASettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASettingsViewController.m; sourceTree = "<group>"; };
+		2A768DA716B3A78000A1F416 /* MASettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASettingsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +200,18 @@
 				25F677CF16B386FD00365BD2 /* MAProfileViewController.h */,
 				25F677D016B386FD00365BD2 /* MAProfileViewController.m */,
 				25F677D116B386FD00365BD2 /* MAProfileViewController.xib */,
+				2A768D9616B3A33C00A1F416 /* MAEventCreation2ViewController.h */,
+				2A768D9716B3A33C00A1F416 /* MAEventCreation2ViewController.m */,
+				2A768D9816B3A33C00A1F416 /* MAEventCreation2ViewController.xib */,
+				2A768D9B16B3A50300A1F416 /* MAGroupsViewController.h */,
+				2A768D9C16B3A50300A1F416 /* MAGroupsViewController.m */,
+				2A768D9D16B3A50300A1F416 /* MAGroupsViewController.xib */,
+				2A768DA016B3A60600A1F416 /* MAGroupViewController.h */,
+				2A768DA116B3A60600A1F416 /* MAGroupViewController.m */,
+				2A768DA216B3A60600A1F416 /* MAGroupViewController.xib */,
+				2A768DA516B3A77F00A1F416 /* MASettingsViewController.h */,
+				2A768DA616B3A77F00A1F416 /* MASettingsViewController.m */,
+				2A768DA716B3A78000A1F416 /* MASettingsViewController.xib */,
 				25CFF68D16B34C25002E4913 /* Supporting Files */,
 			);
 			path = Mundi;
@@ -258,6 +290,10 @@
 				255E305916B35ECA003CA4FD /* MAEventCreationViewController.xib in Resources */,
 				251B54BE16B37CE900518258 /* MASingleEventViewController.xib in Resources */,
 				25F677D316B386FD00365BD2 /* MAProfileViewController.xib in Resources */,
+				2A768D9A16B3A33C00A1F416 /* MAEventCreation2ViewController.xib in Resources */,
+				2A768D9F16B3A50300A1F416 /* MAGroupsViewController.xib in Resources */,
+				2A768DA416B3A60700A1F416 /* MAGroupViewController.xib in Resources */,
+				2A768DA916B3A78000A1F416 /* MASettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +313,10 @@
 				251B54BD16B37CE900518258 /* MASingleEventViewController.m in Sources */,
 				25F677D216B386FD00365BD2 /* MAProfileViewController.m in Sources */,
 				2559D80C16B38F3700A08A66 /* MAEventViewCell.m in Sources */,
+				2A768D9916B3A33C00A1F416 /* MAEventCreation2ViewController.m in Sources */,
+				2A768D9E16B3A50300A1F416 /* MAGroupsViewController.m in Sources */,
+				2A768DA316B3A60700A1F416 /* MAGroupViewController.m in Sources */,
+				2A768DA816B3A78000A1F416 /* MASettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
