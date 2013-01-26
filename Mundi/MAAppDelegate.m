@@ -13,6 +13,7 @@
 #import "MAEventViewController.h"
 #import "MAMainNavController.h"
 #import "MAEventCreationViewController.h"
+#import "MyLogInViewController.h"
 
 @implementation MAAppDelegate
 
@@ -53,8 +54,9 @@
     
     if (![PFUser currentUser]) { // No user logged in
         // Create the log in view controller
-        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
-        logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsFacebook;
+        MyLogInViewController *logInViewController = [[MyLogInViewController alloc] init];
+        logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsFacebook |PFLogInFieldsSignUpButton
+                                  |PFLogInFieldsLogInButton;
         [logInViewController setDelegate:navController]; // Set ourselves as the delegate
         
         // Create the sign up view controller
