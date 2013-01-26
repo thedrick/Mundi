@@ -30,7 +30,7 @@
 {
     MACreateEventView *createView = [[MACreateEventView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     [createView.nextButton addTarget:self
-                              action:@selector(createEvent:)
+                              action:@selector(inviteFriends:)
                     forControlEvents:UIControlEventTouchUpInside];
     [createView.backButton addTarget:self
                               action:@selector(backButtonPressed:)
@@ -98,6 +98,12 @@
     self.view.center = initialCenter;
 }
 
+- (void)facebookViewControllerDoneWasPressed:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self createEvent];
+}
+
 - (IBAction)inviteFriends:(id)selector
 {
     PF_FBFriendPickerViewController *friendPicker = [[PF_FBFriendPickerViewController alloc] init];
@@ -107,12 +113,13 @@
     friendPicker.sortOrdering = PF_FBFriendSortByFirstName;
     
     [friendPicker loadData];
+    [friendPicker setDelegate:self];
 
     // MORE OPTIONS
     [self.navigationController pushViewController:friendPicker animated:YES];
 }
 
-- (IBAction)createEvent:(id)sender
+- (void)createEvent
 {
     MACreateEventView *myView = (MACreateEventView *)self.view;
     PFObject *user = [PFUser currentUser];

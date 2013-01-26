@@ -169,7 +169,7 @@
         NSString *attendeesOnly = [attendees stringByReplacingOccurrencesOfString:@", " withString:@" "];
         eventAttendees = [attendeesOnly componentsSeparatedByString:@" "];
     }
-    MAAttendeesViewController *attendeesVC = [[MAAttendeesViewController alloc] initWithAttendees:eventAttendees];
+    MAAttendeesViewController *attendeesVC = [[MAAttendeesViewController alloc] initWithStyle:UITableViewStylePlain];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self.navigationController pushViewController:attendeesVC animated:YES];
 }

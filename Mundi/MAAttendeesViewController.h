@@ -9,9 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface MAAttendeesViewController : UITableViewController
-{
-    NSArray *attendees;
-}
-- (id)initWithAttendees:(NSArray *)a;
-- (void)setAttendees:(NSArray *)attens;
 @end

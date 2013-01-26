@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface MAEventCreationViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
+@interface MAEventCreationViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate, PF_FBFriendPickerDelegate>
 {
     NSString *time;
     NSString *name;

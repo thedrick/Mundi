@@ -16,37 +16,9 @@
 
 @implementation MAAttendeesViewController
 
-- (id)initWithAttendees:(NSArray *)a {
-    self = [super initWithStyle:UITableViewStylePlain];
-    if (self) {
-        attendees = nil;
-        [self loadAttendees];
-    }
-    return self;
-}
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    if (!attendees) {
-        [self loadAttendees];
-    }
-}
-
-- (void)loadAttendees
-{
-    NSDictionary *mitra = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:@"Mitra Raman", @"http://profile.ak.fbcdn.net/hprofile-ak-prn1/50053_548517593_1597495582_q.jpg", nil]
-                                                      forKeys:[NSArray arrayWithObjects:@"name", "picture", nil]];
-    NSDictionary *tyler = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:@"Tyler Hedrick", @"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc6/195268_728985334_1600258883_q.jpg", nil]
-                                                     forKeys:[NSArray arrayWithObjects:@"name", @"picture", nil]];
-    attendees = [NSArray arrayWithObjects:mitra, tyler, nil];
-}
-
-- (void)setAttendees:(NSArray *)attens
-{
-    attendees = attens;
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,7 +31,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [attendees count];
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -67,12 +39,16 @@
     static NSString *CellIdentifier = @"AttendeeCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [[attendees objectAtIndex:[indexPath row]] valueForKey:@"name"];
-    NSString *picURL = [[attendees objectAtIndex:[indexPath row]] valueForKey:@"picture"];
-    [cell.imageView setImageWithURL:[NSURL URLWithString:picURL]];
+    if ([indexPath row] == 0) {
+        cell.textLabel.text = @"Mitra Raman";
+        [cell.imageView setImage:[UIImage imageNamed:@"mitra.png"]];
+    } else {
+        cell.textLabel.text = @"Tyler Hedrick";
+        cell.imageView.image = [UIImage imageNamed:@"tyler.png"];
+    }
     return cell;
 }
 
