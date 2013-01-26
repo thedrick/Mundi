@@ -40,13 +40,10 @@
     [self.logInView.signUpLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:14.0]];
     
     // Add login field background
-    //fieldsBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]];
     [self.logInView.usernameField setBackgroundColor:[UIColor whiteColor]];
-    [self.logInView.usernameField setBackgroundColor:[UIColor whiteColor]];
+    [self.logInView.passwordField setBackgroundColor:[UIColor whiteColor]];
     self.logInView.usernameField.borderStyle = UITextBorderStyleRoundedRect;
     self.logInView.passwordField.borderStyle = UITextBorderStyleRoundedRect;
-    
-    [self.logInView.passwordField setBackgroundColor:[UIColor whiteColor]];
     
     // Set field text color
     [self.logInView.usernameField setTextColor:[UIColor blackColor]];

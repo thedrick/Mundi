@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0011B22216B4390B0088040B /* MyLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0011B22116B4390B0088040B /* MyLogInViewController.m */; };
 		0011B22516B43A090088040B /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0011B22416B43A090088040B /* bg.png */; };
+		0011B22C16B43E6D0088040B /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0011B22B16B43E6D0088040B /* MySignUpViewController.m */; };
 		251B54BD16B37CE900518258 /* MASingleEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 251B54BB16B37CE900518258 /* MASingleEventViewController.m */; };
 		251B54BE16B37CE900518258 /* MASingleEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 251B54BC16B37CE900518258 /* MASingleEventViewController.xib */; };
 		252C766E16B3A7E300E14940 /* raleway_thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 252C766D16B3A7E300E14940 /* raleway_thin.ttf */; };
@@ -53,6 +54,8 @@
 		0011B22016B4390B0088040B /* MyLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLogInViewController.h; sourceTree = "<group>"; };
 		0011B22116B4390B0088040B /* MyLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLogInViewController.m; sourceTree = "<group>"; };
 		0011B22416B43A090088040B /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		0011B22A16B43E6D0088040B /* MySignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySignUpViewController.h; sourceTree = "<group>"; };
+		0011B22B16B43E6D0088040B /* MySignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySignUpViewController.m; sourceTree = "<group>"; };
 		251B54BA16B37CE900518258 /* MASingleEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASingleEventViewController.h; sourceTree = "<group>"; };
 		251B54BB16B37CE900518258 /* MASingleEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASingleEventViewController.m; sourceTree = "<group>"; };
 		251B54BC16B37CE900518258 /* MASingleEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASingleEventViewController.xib; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				252E513F16B34F280057D2D1 /* MATabNavigation.m */,
 				0011B22016B4390B0088040B /* MyLogInViewController.h */,
 				0011B22116B4390B0088040B /* MyLogInViewController.m */,
+				0011B22A16B43E6D0088040B /* MySignUpViewController.h */,
+				0011B22B16B43E6D0088040B /* MySignUpViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				252C767A16B3CD4B00E14940 /* MASingleEventView.m in Sources */,
 				252C767F16B4176A00E14940 /* MAProfileView.m in Sources */,
 				0011B22216B4390B0088040B /* MyLogInViewController.m in Sources */,
+				0011B22C16B43E6D0088040B /* MySignUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
