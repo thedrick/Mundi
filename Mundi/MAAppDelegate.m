@@ -15,13 +15,29 @@
 
 @implementation MAAppDelegate
 
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [imageData appendData:data];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    headerImageView.image = [UIImage imageWithData:imageData];
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [PFFacebookUtils handleOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation { return [PFFacebookUtils handleOpenURL:url];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    [Parse setApplicationId:@"QIxv8vjLzNni3w9UTbHEMu5tskz03ApKOuAAxgxE"
-                  clientKey:@"KlZQuRozbWdWgXIOZOXDIfXG89eft2V9bdVkpJrV"];
-    
+    [Parse setApplicationId:@"294970237291608"
+                  clientKey:@"e6225746e6bdbf2d42ad572b2cbc57db"];
+    [PFFacebookUtils initializeWithApplicationId:@"294970237291608"];
+        
     MAEventViewController *eventViewController = [[MAEventViewController alloc] initWithStyle:UITableViewStylePlain];
     MAProfileViewController *profieViewController = [[MAProfileViewController alloc] init];
     
@@ -49,8 +65,61 @@
         [navController presentViewController:logInViewController animated:YES completion:NULL];
     }
     
+    
+    
     return YES;
 }
+
+
+- (IBAction)loginButtonTouchHandler:(id)sender {
+    NSArray *permissionsArray = @[@"user_location", @"gender", @"name", @"first_name", @"read_friendslist"];
+    
+    [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
+        
+        if(!user) {
+            if(!error) {
+                NSLog(@"User cancelled FB login");
+            } else{
+                NSLog(@"error occurred: %@", error);
+            }
+        } else if(user.isNew) {
+            NSLog(@"User with FB signed up and logged in");
+            [self.navigationController pushViewController:[[UserDetailsViewController alloc]initWithStyle: UITableViewStyleGrouped] animated:YES];
+        } else {
+            NSLog(@"User with FB logged in");
+            [self.navigationController pushViewController:[[UserDetailsViewController alloc]initWithStyle:UITableViewStyleGrouped] animated:YES];
+        }
+    }];
+}
+
+- (void)viewDidLoad {
+    
+    NSString *requestPath = @"me/?fields=name,location,gender,first_name,friendslist";
+    
+    PF_FBRequest *request = [PF_FBRequest requestForGraphPath:requestPath];
+    [request startWithCompletionHandler:^(PF_FBRequestConnection *connection, id result, NSError *error) {
+        if (!error) {
+            NSDictionary *userData = (NSDictionary *)result;
+            
+            NSString *facebookID = userData[@"id"];
+            NSString *name = userData[@"name"];
+            NSString *location = userData[@"location"][@"name"];
+            NSString *gender = userData[@"gender"];
+        }
+    }];
+    
+    _imageData = [[NSMutableData alloc]init];
+    
+    NSUrl *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
+    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:pictureURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:2.0f];
+    NSURLConnection *urlConnection = [[NSURLConnection alloc]initWithRequest:urlRequest delegate:self];
+    
+    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+        [self.navigationController pushViewController: [[UserDetailsViewController alloc]initWithStyle:UITableViewStyleGrouped]animated:NO];
+    }
+}
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
