@@ -12,6 +12,7 @@
 		252C766E16B3A7E300E14940 /* raleway_thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 252C766D16B3A7E300E14940 /* raleway_thin.ttf */; };
 		252C767216B3B1BA00E14940 /* tabbarbkgd.png in Resources */ = {isa = PBXBuildFile; fileRef = 252C767116B3B1BA00E14940 /* tabbarbkgd.png */; };
 		252C767516B3B41700E14940 /* MACreateEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 252C767416B3B41700E14940 /* MACreateEventView.m */; };
+		252C767A16B3CD4B00E14940 /* MASingleEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 252C767916B3CD4A00E14940 /* MASingleEventView.m */; };
 		252E512216B34D2E0057D2D1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512116B34D2E0057D2D1 /* Parse.framework */; };
 		252E513116B34D9D0057D2D1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512416B34D9D0057D2D1 /* Accounts.framework */; };
 		252E513216B34D9D0057D2D1 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512516B34D9D0057D2D1 /* AdSupport.framework */; };
@@ -54,6 +55,8 @@
 		252C767116B3B1BA00E14940 /* tabbarbkgd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarbkgd.png; sourceTree = "<group>"; };
 		252C767316B3B41700E14940 /* MACreateEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACreateEventView.h; sourceTree = "<group>"; };
 		252C767416B3B41700E14940 /* MACreateEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACreateEventView.m; sourceTree = "<group>"; };
+		252C767816B3CD4A00E14940 /* MASingleEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASingleEventView.h; sourceTree = "<group>"; };
+		252C767916B3CD4A00E14940 /* MASingleEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASingleEventView.m; sourceTree = "<group>"; };
 		252E512116B34D2E0057D2D1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		252E512416B34D9D0057D2D1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		252E512516B34D9D0057D2D1 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -129,6 +132,8 @@
 		252C767616B3B41D00E14940 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				252C767816B3CD4A00E14940 /* MASingleEventView.h */,
+				252C767916B3CD4A00E14940 /* MASingleEventView.m */,
 				252C767316B3B41700E14940 /* MACreateEventView.h */,
 				252C767416B3B41700E14940 /* MACreateEventView.m */,
 				2559D80A16B38F3700A08A66 /* MAEventViewCell.h */,
@@ -311,6 +316,7 @@
 				25F677D216B386FD00365BD2 /* MAProfileViewController.m in Sources */,
 				2559D80C16B38F3700A08A66 /* MAEventViewCell.m in Sources */,
 				252C767516B3B41700E14940 /* MACreateEventView.m in Sources */,
+				252C767A16B3CD4B00E14940 /* MASingleEventView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

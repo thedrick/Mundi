@@ -67,6 +67,7 @@
     [timeLabel setText:[object objectForKey:@"time"]];
     [timeLabel setBackgroundColor:[UIColor clearColor]];
     [timeLabel setFont:timeFont];
+    [timeLabel setTextColor:poppy];
 
     NSString *eventCategory = [object objectForKey:@"category"];
     

@@ -67,28 +67,28 @@
     [location setBorderStyle:UITextBorderStyleLine];
     [category setBorderStyle:UITextBorderStyleLine];
     details.layer.borderColor = [[UIColor grayColor] CGColor];
-    details.layer.borderWidth = 0.7f;
-    details.layer.cornerRadius = 6;
+    details.layer.borderWidth = 0.5f;
+    details.layer.cornerRadius = 2;
     
     eventName.layer.borderColor = [[UIColor grayColor] CGColor];
-    eventName.layer.borderWidth = 0.7f;
-    eventName.layer.cornerRadius = 6;
+    eventName.layer.borderWidth = 0.5f;
+    eventName.layer.cornerRadius = 4;
     
     date.layer.borderColor = [[UIColor grayColor] CGColor];
-    date.layer.borderWidth = 0.7f;
-    date.layer.cornerRadius = 6;
+    date.layer.borderWidth = 0.5f;
+    date.layer.cornerRadius = 4;
     
     time.layer.borderColor = [[UIColor grayColor] CGColor];
     time.layer.borderWidth = 0.7f;
-    time.layer.cornerRadius = 6;
+    time.layer.cornerRadius = 4;
     
     location.layer.borderColor = [[UIColor grayColor] CGColor];
     location.layer.borderWidth = 0.7f;
-    location.layer.cornerRadius = 6;
+    location.layer.cornerRadius = 4;
     
     category.layer.borderColor = [[UIColor grayColor] CGColor];
     category.layer.borderWidth = 0.7f;
-    category.layer.cornerRadius = 6;
+    category.layer.cornerRadius = 4;
 
     eventName.placeholder = @"Event name";
     date.placeholder = @"Date";

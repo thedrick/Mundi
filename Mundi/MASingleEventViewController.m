@@ -7,6 +7,7 @@
 //
 
 #import "MASingleEventViewController.h"
+#import "MASingleEventView.h"
 
 @interface MASingleEventViewController ()
 
@@ -23,6 +24,12 @@
         object = obj;
     }
     return self;
+}
+
+- (void)loadView
+{
+    MASingleEventView *eventView = [[MASingleEventView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    self.view = eventView;
 }
 
 - (void)viewDidLoad
@@ -43,6 +50,21 @@
 {
     [super viewWillAppear:animated];
     self.navigationItem.title = [object objectForKey:@"name"];
+    
+    UISwipeGestureRecognizer *swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                                                          action:@selector(swipeBack:)];
+    [swipeRecognizer setDelegate:self];
+    [self.view addGestureRecognizer:swipeRecognizer];
+
+}
+
+- (void)swipeBack:(UISwipeGestureRecognizer *)gr
+{
+    if (gr.direction ==  UISwipeGestureRecognizerDirectionRight) {
+        if (gr.state == UIGestureRecognizerStateEnded) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning

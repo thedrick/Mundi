@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface MASingleEventViewController : UIViewController
+@interface MASingleEventViewController : UIViewController <UIGestureRecognizerDelegate>
 {
     PFObject *object;
 }
