@@ -147,10 +147,24 @@
 }
 
 
-- (IBAction)joinEvent:(id)sender){
+- (IBAction)joinEvent:(id)sender {
 }
 
 - (IBAction)viewAttendees:(id)sender {
+    PFUser *user = [PFUser currentUser];
+    PFObject *event = object;
+    
+    NSString *eventId = event.objectId;
+    NSString *attendees = [event objectForKey:@"attendees"];
+    NSArray *eventAttendees = [[NSArray alloc] init];
+    
+    if(attendees == nil){
+        //creator is only attendee
+        eventAttendees = [NSArray arrayWithObjects:user.objectId, nil];
+    } else {
+        NSString *attendeesOnly = [attendees stringByReplacingOccurrencesOfString:@", " withString:@" "];
+        eventAttendees = [attendeesOnly componentsSeparatedByString:@" "];
+    }
 }
 
 @end

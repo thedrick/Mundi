@@ -36,12 +36,6 @@
 {
     PFUser *user = [PFUser currentUser];
     NSString *pictureURL = [user objectForKey:@"pictureURL"];
-    //
-//    PF_FBProfilePictureView *userProfilePicture = [[PF_FBProfilePictureView alloc] init];
-//    userProfilePicture.profileID = userId;
-//    profilePicture = [userProfilePicture init];
-    
-    //    profilePicture = [userProfilePicture initWithProfileID:userId pictureCropping:PF_FBProfilePictureCroppingSquare];
     
     [profilePicture setImageWithURL:[NSURL URLWithString:pictureURL]];
     

@@ -98,6 +98,20 @@
     self.view.center = initialCenter;
 }
 
+- (IBAction)inviteFriends:(id)selector
+{
+    PF_FBFriendPickerViewController *friendPicker = [[PF_FBFriendPickerViewController alloc] init];
+    friendPicker.allowsMultipleSelection = YES;
+    friendPicker.displayOrdering = PF_FBFriendDisplayByFirstName;
+    friendPicker.itemPicturesEnabled = YES;
+    friendPicker.sortOrdering = PF_FBFriendSortByFirstName;
+    
+    [friendPicker loadData];
+
+    // MORE OPTIONS
+    [self.navigationController pushViewController:friendPicker animated:YES];
+}
+
 - (IBAction)createEvent:(id)sender
 {
     MACreateEventView *myView = (MACreateEventView *)self.view;
