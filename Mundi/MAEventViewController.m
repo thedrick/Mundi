@@ -151,7 +151,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PFObject *object = [events objectAtIndex:[indexPath row]];
+    PFObject *object = [events objectAtIndex:[indexPath section]];
     MASingleEventViewController *singleEvent = [[MASingleEventViewController alloc] initWithObject:object];
     [self.navigationController pushViewController:singleEvent animated:YES];
 }

@@ -25,11 +25,6 @@
     return self;
 }
 
-- (void)loadView
-{
-    
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -63,17 +58,22 @@
     PFObject *user = [PFUser currentUser];
     
     NSString *userId = user.objectId;
-    NSString *userAttendingEvents = [user objectForKey:@"attendingEvents"];
+    NSString *userAttendingEvents = (NSString *)[user objectForKey:@"attendingEvents"];
     
     NSString *eventId = object.objectId;
-    NSString *eventAttendees = [object objectForKey:@"attendees"];
+    NSString *eventAttendees = (NSString *)[object objectForKey:@"attendees"];
     
     NSRange result = [eventAttendees rangeOfString:userId];
-    NSString *eventAttendeesNew = @"";
-    NSString *userAttendingEventsNew = @"";
+    NSString *eventAttendeesNew = [[NSString alloc] init];
+    NSString *userAttendingEventsNew = [[NSString alloc] init];
+    
+    if(userAttendingEvents == nil) {
+        userAttendingEvents = @"";
+    }
     
     if(result.location != NSNotFound) {
         eventAttendeesNew = [eventAttendees stringByReplacingOccurrencesOfString:userId withString:@""];
+        NSLog(@"eventAttendeesNew: %@", eventAttendeesNew);
         [object setObject:eventAttendeesNew forKey:@"attendees"];
         userAttendingEventsNew = [userAttendingEvents stringByReplacingOccurrencesOfString:eventId withString:@""];
         [user setObject:userAttendingEventsNew forKey:@"attendingEvents"];
@@ -83,6 +83,8 @@
         eventAttendeesNew = [eventAttendees stringByAppendingString:appendingUserId];
         userAttendingEventsNew = [userAttendingEvents stringByAppendingString:appendingEventId];
     }
+    NSLog(@"eventAttendeesNew outside: %@", eventAttendeesNew);
+    NSLog(@"userAttendingEventsNew outside: %@", userAttendingEventsNew);
     [object setObject:eventAttendeesNew forKey:@"attendees"];
     [user setObject:userAttendingEventsNew forKey:@"attendingEvents"];
     [object saveInBackground];
