@@ -43,6 +43,8 @@
 	<array>
 		<string>raleway_thin.ttf</string>
 		<string>DroidSans.ttf</string>
+		<string>Wingdings 2.ttf</string>
+		<string>Webdings.ttf</string>
 	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>

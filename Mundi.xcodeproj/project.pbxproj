@@ -40,6 +40,8 @@
 		25B8A54116B44CA5007BBBD5 /* plusbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A54016B44CA5007BBBD5 /* plusbutton.png */; };
 		25B8A54C16B457C8007BBBD5 /* buttoncircleDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A54B16B457C8007BBBD5 /* buttoncircleDown.png */; };
 		25B8A54F16B45AA8007BBBD5 /* tabbarbkgd.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A54E16B45AA8007BBBD5 /* tabbarbkgd.png */; };
+		25B8A55116B46292007BBBD5 /* Wingdings 2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A55016B46292007BBBD5 /* Wingdings 2.ttf */; };
+		25B8A55316B463A6007BBBD5 /* Webdings.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A55216B463A6007BBBD5 /* Webdings.ttf */; };
 		25CFF68716B34C25002E4913 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68616B34C25002E4913 /* UIKit.framework */; };
 		25CFF68916B34C25002E4913 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68816B34C25002E4913 /* Foundation.framework */; };
 		25CFF68B16B34C25002E4913 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68A16B34C25002E4913 /* CoreGraphics.framework */; };
@@ -106,6 +108,8 @@
 		25B8A54016B44CA5007BBBD5 /* plusbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusbutton.png; sourceTree = "<group>"; };
 		25B8A54B16B457C8007BBBD5 /* buttoncircleDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttoncircleDown.png; sourceTree = "<group>"; };
 		25B8A54E16B45AA8007BBBD5 /* tabbarbkgd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarbkgd.png; sourceTree = "<group>"; };
+		25B8A55016B46292007BBBD5 /* Wingdings 2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wingdings 2.ttf"; sourceTree = "<group>"; };
+		25B8A55216B463A6007BBBD5 /* Webdings.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Webdings.ttf; sourceTree = "<group>"; };
 		25CFF68216B34C25002E4913 /* Mundi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mundi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25CFF68616B34C25002E4913 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		25CFF68816B34C25002E4913 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -266,6 +270,8 @@
 		25CFF68D16B34C25002E4913 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				25B8A55216B463A6007BBBD5 /* Webdings.ttf */,
+				25B8A55016B46292007BBBD5 /* Wingdings 2.ttf */,
 				25B8A54E16B45AA8007BBBD5 /* tabbarbkgd.png */,
 				25B8A54B16B457C8007BBBD5 /* buttoncircleDown.png */,
 				25B8A54016B44CA5007BBBD5 /* plusbutton.png */,
@@ -374,6 +380,8 @@
 				25B8A54116B44CA5007BBBD5 /* plusbutton.png in Resources */,
 				25B8A54C16B457C8007BBBD5 /* buttoncircleDown.png in Resources */,
 				25B8A54F16B45AA8007BBBD5 /* tabbarbkgd.png in Resources */,
+				25B8A55116B46292007BBBD5 /* Wingdings 2.ttf in Resources */,
+				25B8A55316B463A6007BBBD5 /* Webdings.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
