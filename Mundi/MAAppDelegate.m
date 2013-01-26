@@ -9,6 +9,9 @@
 #import "MAAppDelegate.h"
 #import <Parse/Parse.h>
 #import "MATabNavigation.h"
+#import "MAProfileViewController.h"
+#import "MAEventViewController.h"
+#import "MAMainNavController.h"
 
 @implementation MAAppDelegate
 
@@ -19,11 +22,32 @@
     [Parse setApplicationId:@"QIxv8vjLzNni3w9UTbHEMu5tskz03ApKOuAAxgxE"
                   clientKey:@"KlZQuRozbWdWgXIOZOXDIfXG89eft2V9bdVkpJrV"];
     
+    MAEventViewController *eventViewController = [[MAEventViewController alloc] initWithStyle:UITableViewStylePlain];
+    MAProfileViewController *profieViewController = [[MAProfileViewController alloc] init];
+    
     MATabNavigation *tabController = [[MATabNavigation alloc] init];
-    self.window.rootViewController = tabController;
+    [tabController setViewControllers:[NSArray arrayWithObjects:eventViewController, profieViewController, nil]];
+    MAMainNavController *navController = [[MAMainNavController alloc] initWithRootViewController:tabController];
+    self.window.rootViewController = navController;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    if (![PFUser currentUser]) { // No user logged in
+        // Create the log in view controller
+        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+        [logInViewController setDelegate:navController]; // Set ourselves as the delegate
+        
+        // Create the sign up view controller
+        PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
+        [signUpViewController setDelegate:navController]; // Set ourselves as the delegate
+        
+        // Assign our sign up controller to be displayed from the login controller
+        [logInViewController setSignUpController:signUpViewController];
+        
+        // Present the log in view controller
+        [navController presentViewController:logInViewController animated:YES completion:NULL];
+    }
     
     return YES;
 }

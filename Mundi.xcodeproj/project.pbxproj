@@ -22,6 +22,11 @@
 		252E513C16B34D9D0057D2D1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512F16B34D9D0057D2D1 /* StoreKit.framework */; };
 		252E513D16B34D9D0057D2D1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E513016B34D9D0057D2D1 /* SystemConfiguration.framework */; };
 		252E514016B34F280057D2D1 /* MATabNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 252E513F16B34F280057D2D1 /* MATabNavigation.m */; };
+		255E304916B3548F003CA4FD /* MAMainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E304816B3548F003CA4FD /* MAMainNavController.m */; };
+		255E304D16B35673003CA4FD /* MAEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E304C16B35673003CA4FD /* MAEventViewController.m */; };
+		255E305016B3569E003CA4FD /* MAProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E304F16B3569E003CA4FD /* MAProfileViewController.m */; };
+		255E305816B35ECA003CA4FD /* MAEventCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E305616B35ECA003CA4FD /* MAEventCreationViewController.m */; };
+		255E305916B35ECA003CA4FD /* MAEventCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 255E305716B35ECA003CA4FD /* MAEventCreationViewController.xib */; };
 		25CFF68716B34C25002E4913 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68616B34C25002E4913 /* UIKit.framework */; };
 		25CFF68916B34C25002E4913 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68816B34C25002E4913 /* Foundation.framework */; };
 		25CFF68B16B34C25002E4913 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68A16B34C25002E4913 /* CoreGraphics.framework */; };
@@ -50,6 +55,15 @@
 		252E513016B34D9D0057D2D1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		252E513E16B34F280057D2D1 /* MATabNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATabNavigation.h; sourceTree = "<group>"; };
 		252E513F16B34F280057D2D1 /* MATabNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATabNavigation.m; sourceTree = "<group>"; };
+		255E304716B3548F003CA4FD /* MAMainNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMainNavController.h; sourceTree = "<group>"; };
+		255E304816B3548F003CA4FD /* MAMainNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMainNavController.m; sourceTree = "<group>"; };
+		255E304B16B35673003CA4FD /* MAEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAEventViewController.h; sourceTree = "<group>"; };
+		255E304C16B35673003CA4FD /* MAEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAEventViewController.m; sourceTree = "<group>"; };
+		255E304E16B3569D003CA4FD /* MAProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProfileViewController.h; sourceTree = "<group>"; };
+		255E304F16B3569E003CA4FD /* MAProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProfileViewController.m; sourceTree = "<group>"; };
+		255E305516B35EC9003CA4FD /* MAEventCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAEventCreationViewController.h; sourceTree = "<group>"; };
+		255E305616B35ECA003CA4FD /* MAEventCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAEventCreationViewController.m; sourceTree = "<group>"; };
+		255E305716B35ECA003CA4FD /* MAEventCreationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MAEventCreationViewController.xib; sourceTree = "<group>"; };
 		25CFF68216B34C25002E4913 /* Mundi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mundi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25CFF68616B34C25002E4913 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		25CFF68816B34C25002E4913 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -139,8 +153,17 @@
 			children = (
 				25CFF69516B34C25002E4913 /* MAAppDelegate.h */,
 				25CFF69616B34C25002E4913 /* MAAppDelegate.m */,
+				255E304716B3548F003CA4FD /* MAMainNavController.h */,
+				255E304816B3548F003CA4FD /* MAMainNavController.m */,
+				255E305516B35EC9003CA4FD /* MAEventCreationViewController.h */,
+				255E305616B35ECA003CA4FD /* MAEventCreationViewController.m */,
+				255E305716B35ECA003CA4FD /* MAEventCreationViewController.xib */,
 				252E513E16B34F280057D2D1 /* MATabNavigation.h */,
 				252E513F16B34F280057D2D1 /* MATabNavigation.m */,
+				255E304B16B35673003CA4FD /* MAEventViewController.h */,
+				255E304C16B35673003CA4FD /* MAEventViewController.m */,
+				255E304E16B3569D003CA4FD /* MAProfileViewController.h */,
+				255E304F16B3569E003CA4FD /* MAProfileViewController.m */,
 				25CFF68D16B34C25002E4913 /* Supporting Files */,
 			);
 			path = Mundi;
@@ -216,6 +239,7 @@
 				25CFF69916B34C25002E4913 /* Default.png in Resources */,
 				25CFF69B16B34C25002E4913 /* Default@2x.png in Resources */,
 				25CFF69D16B34C25002E4913 /* Default-568h@2x.png in Resources */,
+				255E305916B35ECA003CA4FD /* MAEventCreationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +253,10 @@
 				25CFF69316B34C25002E4913 /* main.m in Sources */,
 				25CFF69716B34C25002E4913 /* MAAppDelegate.m in Sources */,
 				252E514016B34F280057D2D1 /* MATabNavigation.m in Sources */,
+				255E304916B3548F003CA4FD /* MAMainNavController.m in Sources */,
+				255E304D16B35673003CA4FD /* MAEventViewController.m in Sources */,
+				255E305016B3569E003CA4FD /* MAProfileViewController.m in Sources */,
+				255E305816B35ECA003CA4FD /* MAEventCreationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
