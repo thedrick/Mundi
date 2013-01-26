@@ -27,6 +27,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    UIButton *plusButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    plusButton.frame = CGRectMake(130, 420, 60, 60);
+    plusButton.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"plusButton.png"]];
+    [self.view addSubview:plusButton];
+    [plusButton addTarget:self
+                   action:@selector(selectedPlusButton:)
+         forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)viewDidLoad
@@ -41,12 +48,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+- (void)selectedPlusButton:(id)sender
 {
-    if ([[item title] isEqualToString:@"+"]) {
-        MAEventCreationViewController *eventCreate = [[MAEventCreationViewController alloc] init];
-        [self presentViewController:eventCreate animated:YES completion:nil];
-    }
+    MAEventCreationViewController *eventCreate = [[MAEventCreationViewController alloc] init];
+    [self presentViewController:eventCreate animated:YES completion:nil];
 }
 
 @end

@@ -10,13 +10,13 @@
 
 @interface MAEventCreationViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
 {
-    NSDate *time;
+    NSString *time;
     NSString *name;
     NSString *locationString;
     NSString *category;
+    NSString *date;
+    CGPoint initialCenter;
 }
-- (IBAction)eventDate:(id)sender;
-- (IBAction)eventCategory:(id)sender;
 - (IBAction)createEvent:(id)sender;
 
 @end

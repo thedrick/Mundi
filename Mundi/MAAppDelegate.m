@@ -42,12 +42,11 @@
     [PFFacebookUtils initializeWithApplicationId:@"294970237291608"];
         
     MAEventViewController *eventViewController = [[MAEventViewController alloc] initWithStyle:UITableViewStylePlain];
-    MAEventCreationViewController *eventCreation = [[MAEventCreationViewController alloc] init];
     MAProfileViewController *profileController = [[MAProfileViewController alloc] init];
     
     MATabNavigation *tabController = [[MATabNavigation alloc] init];
     [tabController setDelegate:tabController];
-    [tabController setViewControllers:[NSArray arrayWithObjects:eventViewController, eventCreation, profileController, nil]];
+    [tabController setViewControllers:[NSArray arrayWithObjects:eventViewController, profileController, nil]];
     MAMainNavController *navController = [[MAMainNavController alloc] initWithRootViewController:tabController];
     self.window.rootViewController = navController;
     

@@ -42,11 +42,8 @@
 {
     [super viewDidLoad];
     [eventName setText:[object objectForKey:@"name"]];
-    NSDate *date = [object objectForKey:@"date"];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
-    [eventTime setText:[dateFormatter stringFromDate:date]];
+    NSString *date = [object objectForKey:@"date"];
+    [eventTime setText:date];
     [eventLocation setText:[object objectForKey:@"locationString"]];
     [eventDetails setText:[object objectForKey:@"details"]];
     [eventCategory setText:[object objectForKey:@"category"]];

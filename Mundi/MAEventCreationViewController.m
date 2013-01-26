@@ -32,6 +32,12 @@
     [createView.nextButton addTarget:self
                               action:@selector(createEvent:)
                     forControlEvents:UIControlEventTouchUpInside];
+    [createView.eventName setDelegate:self];
+    [createView.location setDelegate:self];
+    [createView.date setDelegate:self];
+    [createView.details setDelegate:self];
+    [createView.category setDelegate:self];
+    [createView.time setDelegate:self];
     self.view = createView;
 }
 
@@ -62,25 +68,38 @@
     return YES;
 }
 
-- (IBAction)eventDate:(id)sender
+- (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    if (time) {
-        time = nil;
-    }
-    //Add the picker to the view
-    
-    time = [NSDate dateWithTimeIntervalSinceNow:20];
+    initialCenter = self.view.center;
+    self.view.center = CGPointMake(initialCenter.x, initialCenter.y - (textField.frame.origin.y - 15));
 }
 
-- (IBAction)eventCategory:(id)sender
+- (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    category = @"Food";
+    self.view.center = initialCenter;
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    initialCenter = self.view.center;
+    self.view.center = CGPointMake(initialCenter.x, initialCenter.y - (textView.frame.origin.y - 15));
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    self.view.center = initialCenter;
 }
 
 - (IBAction)createEvent:(id)sender
 {
-    NSLog(@"Called the button");
-    if (!time || !locationString || !category || !name) {
+    MACreateEventView *myView = (MACreateEventView *)self.view;
+    time = myView.time.text;
+    locationString = myView.location.text;
+    category = myView.category.text;
+    name = myView.eventName.text;
+    date = myView.date.text;
+    
+    if (!time || !locationString || !category || !name || !date) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event Invalid"
                                                         message:@"Make sure you fill out all fields"
                                                        delegate:nil
@@ -88,30 +107,30 @@
                                               otherButtonTitles:nil, nil];
         [alert show];
     } else {
-        MACreateEventView *myView = (MACreateEventView *)self.view;
         PFObject *newEvent = [PFObject objectWithClassName:@"Event"];
         [newEvent setObject:name forKey:@"name"];
         [newEvent setObject:locationString forKey:@"locationString"];
         [newEvent setObject:category forKey:@"category"];
-        [newEvent setObject:time forKey:@"date"];
         [newEvent setObject:@"" forKey:@"attendees"];
-        [newEvent setObject:myView.time.text forKey:@"time"];
-        
+        [newEvent setObject:time forKey:@"time"];
+        [newEvent setObject:date forKey:@"date"];
         PFObject *user = [PFUser currentUser];
-        NSString *userId = user.objectId;
-        NSString* userName = [user objectForKey:@"username"];
-        NSString *eventId = newEvent.objectId;
-        NSString *eventIdComma = [@", " stringByAppendingString:eventId];
-        NSString *userCreatedEvents = [user objectForKey:@"createdEvents"];
-        NSString *userCreatedEventsNew = [userCreatedEvents stringByAppendingString:eventIdComma];
+        [newEvent setObject:user.objectId forKey:@"createdBy"];
+        [newEvent setObject:[user objectForKey:@"facebookName"] forKey:@"creatorUsername"];
+        [newEvent setObject:myView.details.text forKey:@"details"];
         
-        [newEvent setObject:userId forKey:@"createdBy"];
-        [newEvent setObject:userName forKey:@"creatorUsername"];
-        
-        [user setObject:userCreatedEventsNew forKey:@"createdEvents"];
-        
-        [newEvent saveInBackground];
-        [user saveInBackground];
+        [newEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                [newEvent refresh];
+                NSString *eventId = newEvent.objectId;
+                NSString *eventIdComma = [@", " stringByAppendingString:eventId];
+                NSString *userCreatedEvents = [user objectForKey:@"createdEvents"];
+                NSString *userCreatedEventsNew = [userCreatedEvents stringByAppendingString:eventIdComma];
+                [user setObject:userCreatedEventsNew forKey:@"createdEvents"];
+                
+                [user saveInBackground];
+            }
+        }];
     }
     
     

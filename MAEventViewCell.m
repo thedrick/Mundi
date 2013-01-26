@@ -54,11 +54,8 @@
     [eventDetails setFont:detailsFont];
     
     // Date
-    NSDate *date = [object objectForKey:@"date"];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
-    [eventDate setText:[dateFormatter stringFromDate:date]];
+    NSString *date = [object objectForKey:@"date"];
+    [eventDate setText:date];
     [eventDate setBackgroundColor:[UIColor clearColor]];
     [eventDate setTextColor:regularColor];
     [eventDate setFont:dateFont];
