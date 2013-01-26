@@ -128,7 +128,7 @@
 		25C3212516B48806003C9D92 /* mitra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mitra.jpg; sourceTree = "<group>"; };
 		25C3212816B48A27003C9D92 /* mitra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mitra.png; sourceTree = "<group>"; };
 		25C3212916B48A27003C9D92 /* tyler.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tyler.png; sourceTree = "<group>"; };
-		25CFF68216B34C25002E4913 /* Mundi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mundi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25CFF68216B34C25002E4913 /* Lien.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lien.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25CFF68616B34C25002E4913 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		25CFF68816B34C25002E4913 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		25CFF68A16B34C25002E4913 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -249,7 +249,7 @@
 		25CFF68316B34C25002E4913 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				25CFF68216B34C25002E4913 /* Mundi.app */,
+				25CFF68216B34C25002E4913 /* Lien.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -364,7 +364,7 @@
 			);
 			name = Mundi;
 			productName = Mundi;
-			productReference = 25CFF68216B34C25002E4913 /* Mundi.app */;
+			productReference = 25CFF68216B34C25002E4913 /* Lien.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -532,7 +532,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mundi/Mundi-Prefix.pch";
 				INFOPLIST_FILE = "Mundi/Mundi-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Lien;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -547,7 +547,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mundi/Mundi-Prefix.pch";
 				INFOPLIST_FILE = "Mundi/Mundi-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Lien;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

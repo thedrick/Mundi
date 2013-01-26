@@ -61,6 +61,7 @@
 - (void)loadEvents
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    [query whereKey:@"creatorUsername" equalTo:@"Mitra Raman"];
     [query addDescendingOrder:@"createdAt"];
     [query setCachePolicy:kPFCachePolicyNetworkOnly];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -110,7 +111,7 @@
     [headerTitleLabel setTextColor:[UIColor colorWithRed:(136/255.0f) green:(136/255.0f) blue:(136/255.0f) alpha:1]];
     [headerTitleLabel setText:@"my events"];
     [headerTitleLabel setTextAlignment:NSTextAlignmentCenter];
-    UIFont *titleFont = [UIFont fontWithName:@"Raleway" size:120];
+    UIFont *titleFont = [UIFont fontWithName:@"Raleway" size:60];
     [headerTitleLabel setFont:titleFont];
     [titleView addSubview:headerTitleLabel];
     return titleView;
@@ -118,7 +119,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [events count];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -129,7 +130,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PFObject *object = [events objectAtIndex:[indexPath section]];
+    PFObject *object = [events objectAtIndex:0];
     
     MAEventViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EventCell"];
     if (!cell) {

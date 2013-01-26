@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface MAProfileViewController : UIViewController
+@interface MAProfileViewController : UIViewController <UIGestureRecognizerDelegate, PF_FBFriendPickerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *username;
 @property (weak, nonatomic) IBOutlet UIImageView *userPicture;

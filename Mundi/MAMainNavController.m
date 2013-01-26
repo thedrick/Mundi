@@ -54,7 +54,7 @@
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     // Create request for user's Facebook data
-    NSString *requestPath = @"me/?fields=name,location,gender,email,picture";
+    NSString *requestPath = @"me/?fields=name,gender,email,picture";
     
     // Send request to Facebook
     PF_FBRequest *request = [PF_FBRequest requestForGraphPath:requestPath];
@@ -64,7 +64,7 @@
             
             NSString *facebookId = userData[@"id"];
             NSString *name = userData[@"name"];
-            NSString *location = userData[@"location"][@"name"];
+            //NSString *location = userData[@"location"][@"name"];
             NSString *gender = userData[@"gender"];
             NSString *email = userData[@"email"];
             
@@ -72,7 +72,8 @@
             // ...
             [user setObject:facebookId forKey:@"facebookId"];
             [user setObject:name forKey:@"facebookName"];
-            [user setObject:location forKey:@"locationString"];
+            //[user setObject:location forKey:@"locationString"];
+            [user setObject:@"Pittsburgh, Pennsylvania" forKey:@"locationString"];
             [user setObject:gender forKey:@"gender"];
             [user setObject:email forKey:@"email"];
             [user setObject:userData[@"picture"][@"data"][@"url"] forKey:@"pictureURL"];

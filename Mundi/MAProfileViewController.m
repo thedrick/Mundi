@@ -8,6 +8,7 @@
 
 #import "MAProfileViewController.h"
 #import "MAProfileView.h"
+#import "MAMyEventViewController.h"
 
 @interface MAProfileViewController ()
 
@@ -70,7 +71,58 @@
 - (void)loadView
 {
     MAProfileView *profile = [[MAProfileView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    [profile.myEventsButton addTarget:self action:@selector(pressedEvents:)
+                     forControlEvents:UIControlEventTouchUpInside];
+    [profile.myGroupsButton addTarget:self action:@selector(pressedFriends:) forControlEvents:UIControlEventTouchUpInside];
     self.view = profile;
+}
+
+- (IBAction)pressedFriends:(id)sender
+{
+    PF_FBFriendPickerViewController *friendPicker = [[PF_FBFriendPickerViewController alloc] init];
+    friendPicker.allowsMultipleSelection = NO;
+    friendPicker.displayOrdering = PF_FBFriendDisplayByFirstName;
+    friendPicker.itemPicturesEnabled = YES;
+    friendPicker.sortOrdering = PF_FBFriendSortByFirstName;
+    
+    [friendPicker loadData];
+    [friendPicker setDelegate:self];
+    
+    // MORE OPTIONS
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.navigationController pushViewController:friendPicker animated:YES];
+}
+
+- (void)facebookViewControllerDoneWasPressed:(id)sender
+{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)facebookViewControllerCancelWasPressed:(id)sender
+{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
+
+}
+
+- (IBAction)pressedEvents:(id)sender
+{
+    MAMyEventViewController *eventView = [[MAMyEventViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    UISwipeGestureRecognizer *swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                                                          action:@selector(swipeBack:)];
+    [swipeRecognizer setDelegate:self];
+    [eventView.view addGestureRecognizer:swipeRecognizer];
+    [self.navigationController pushViewController:eventView animated:YES];
+}
+
+- (void)swipeBack:(UISwipeGestureRecognizer *)gr
+{
+    if (gr.direction ==  UISwipeGestureRecognizerDirectionRight) {
+        if (gr.state == UIGestureRecognizerStateEnded) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    }
 }
 
 - (void)viewDidLoad

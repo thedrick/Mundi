@@ -20,7 +20,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         usernameLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 320, 120)];
-        locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(140, 150, 200, 20)];
+        locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 160, 200, 50)];
         profilePicture = [[UIImageView alloc] initWithFrame:CGRectMake(25, 140, 84, 84)];
         addToGroupButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         inviteToEventButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -40,7 +40,7 @@
     [profilePicture setImageWithURL:[NSURL URLWithString:pictureURL]];
     
     UIFont *titleFont = [UIFont fontWithName:@"Raleway" size:60];
-    UIFont *locationFont = [UIFont fontWithName:@"DroidSans" size:12];
+    UIFont *locationFont = [UIFont fontWithName:@"DroidSans" size:16];
     UIColor *fontColor = [UIColor colorWithWhite:0.2 alpha:1];
     UIFont *buttonFont = [UIFont fontWithName:@"DroidSans" size:11];
     usernameLabel.text = [user objectForKey:@"facebookName"];
@@ -53,7 +53,7 @@
     locationLabel.text = [[user objectForKey:@"locationString"] uppercaseString];
     locationLabel.font = locationFont;
     locationLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    locationLabel.numberOfLines = 1;
+    locationLabel.numberOfLines = 0;
     locationLabel.textColor = fontColor;
     locationLabel.backgroundColor = [UIColor clearColor];
     
