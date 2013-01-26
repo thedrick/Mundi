@@ -93,11 +93,16 @@
 - (IBAction)createEvent:(id)sender
 {
     MACreateEventView *myView = (MACreateEventView *)self.view;
+    PFObject *user = [PFUser currentUser];
     time = myView.time.text;
     locationString = myView.location.text;
     category = myView.category.text;
     name = myView.eventName.text;
     date = myView.date.text;
+    NSString *facebookName = [user objectForKey:@"facebookName"];
+    if (facebookName == nil) {
+        facebookName = @"No Name";
+    }
     
     if (!time || !locationString || !category || !name || !date) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event Invalid"
@@ -114,9 +119,8 @@
         [newEvent setObject:@"" forKey:@"attendees"];
         [newEvent setObject:time forKey:@"time"];
         [newEvent setObject:date forKey:@"date"];
-        PFObject *user = [PFUser currentUser];
         [newEvent setObject:user.objectId forKey:@"createdBy"];
-        [newEvent setObject:[user objectForKey:@"facebookName"] forKey:@"creatorUsername"];
+        [newEvent setObject:facebookName forKey:@"creatorUsername"];
         [newEvent setObject:myView.details.text forKey:@"details"];
         
         [newEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -131,6 +135,7 @@
                 [user saveInBackground];
             }
         }];
+        [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     }
     
     
