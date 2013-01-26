@@ -44,6 +44,7 @@
     MAProfileViewController *profileController = [[MAProfileViewController alloc] init];
     
     MATabNavigation *tabController = [[MATabNavigation alloc] init];
+    [tabController setDelegate:tabController];
     [tabController setViewControllers:[NSArray arrayWithObjects:eventViewController, eventCreation, profileController, nil]];
     MAMainNavController *navController = [[MAMainNavController alloc] initWithRootViewController:tabController];
     self.window.rootViewController = navController;

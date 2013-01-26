@@ -29,6 +29,9 @@
 - (void)loadView
 {
     MACreateEventView *createView = [[MACreateEventView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    [createView.nextButton addTarget:self
+                              action:@selector(createEvent:)
+                    forControlEvents:UIControlEventTouchUpInside];
     self.view = createView;
 }
 
@@ -76,6 +79,7 @@
 
 - (IBAction)createEvent:(id)sender
 {
+    NSLog(@"Called the button");
     if (!time || !locationString || !category || !name) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event Invalid"
                                                         message:@"Make sure you fill out all fields"
@@ -84,12 +88,14 @@
                                               otherButtonTitles:nil, nil];
         [alert show];
     } else {
+        MACreateEventView *myView = (MACreateEventView *)self.view;
         PFObject *newEvent = [PFObject objectWithClassName:@"Event"];
         [newEvent setObject:name forKey:@"name"];
         [newEvent setObject:locationString forKey:@"locationString"];
         [newEvent setObject:category forKey:@"category"];
         [newEvent setObject:time forKey:@"date"];
         [newEvent setObject:@"" forKey:@"attendees"];
+        [newEvent setObject:myView.time.text forKey:@"time"];
         
         PFObject *user = [PFUser currentUser];
         NSString *userId = user.objectId;

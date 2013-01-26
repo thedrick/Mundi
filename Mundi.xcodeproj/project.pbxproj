@@ -35,7 +35,6 @@
 		255E304916B3548F003CA4FD /* MAMainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E304816B3548F003CA4FD /* MAMainNavController.m */; };
 		255E304D16B35673003CA4FD /* MAEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E304C16B35673003CA4FD /* MAEventViewController.m */; };
 		255E305816B35ECA003CA4FD /* MAEventCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E305616B35ECA003CA4FD /* MAEventCreationViewController.m */; };
-		255E305916B35ECA003CA4FD /* MAEventCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 255E305716B35ECA003CA4FD /* MAEventCreationViewController.xib */; };
 		25CFF68716B34C25002E4913 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68616B34C25002E4913 /* UIKit.framework */; };
 		25CFF68916B34C25002E4913 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68816B34C25002E4913 /* Foundation.framework */; };
 		25CFF68B16B34C25002E4913 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68A16B34C25002E4913 /* CoreGraphics.framework */; };
@@ -44,6 +43,7 @@
 		25CFF69716B34C25002E4913 /* MAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CFF69616B34C25002E4913 /* MAAppDelegate.m */; };
 		25CFF69B16B34C25002E4913 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69A16B34C25002E4913 /* Default@2x.png */; };
 		25CFF69D16B34C25002E4913 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69C16B34C25002E4913 /* Default-568h@2x.png */; };
+		25D9EABD16B438F700FB3C13 /* buttoncircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D9EABC16B438F700FB3C13 /* buttoncircle.png */; };
 		25F677D216B386FD00365BD2 /* MAProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F677D016B386FD00365BD2 /* MAProfileViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -85,7 +85,6 @@
 		255E304C16B35673003CA4FD /* MAEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAEventViewController.m; sourceTree = "<group>"; };
 		255E305516B35EC9003CA4FD /* MAEventCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAEventCreationViewController.h; sourceTree = "<group>"; };
 		255E305616B35ECA003CA4FD /* MAEventCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAEventCreationViewController.m; sourceTree = "<group>"; };
-		255E305716B35ECA003CA4FD /* MAEventCreationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MAEventCreationViewController.xib; sourceTree = "<group>"; };
 		25CFF68216B34C25002E4913 /* Mundi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mundi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25CFF68616B34C25002E4913 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		25CFF68816B34C25002E4913 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +97,7 @@
 		25CFF69616B34C25002E4913 /* MAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAAppDelegate.m; sourceTree = "<group>"; };
 		25CFF69A16B34C25002E4913 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		25CFF69C16B34C25002E4913 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		25D9EABC16B438F700FB3C13 /* buttoncircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttoncircle.png; sourceTree = "<group>"; };
 		25F677CF16B386FD00365BD2 /* MAProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProfileViewController.h; sourceTree = "<group>"; };
 		25F677D016B386FD00365BD2 /* MAProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -212,7 +212,6 @@
 				252C767616B3B41D00E14940 /* Views */,
 				25CFF69516B34C25002E4913 /* MAAppDelegate.h */,
 				25CFF69616B34C25002E4913 /* MAAppDelegate.m */,
-				255E305716B35ECA003CA4FD /* MAEventCreationViewController.xib */,
 				251B54BC16B37CE900518258 /* MASingleEventViewController.xib */,
 				25CFF68D16B34C25002E4913 /* Supporting Files */,
 			);
@@ -222,6 +221,7 @@
 		25CFF68D16B34C25002E4913 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				25D9EABC16B438F700FB3C13 /* buttoncircle.png */,
 				252C767B16B3E24600E14940 /* Default.png */,
 				252C767116B3B1BA00E14940 /* tabbarbkgd.png */,
 				252C766D16B3A7E300E14940 /* raleway_thin.ttf */,
@@ -291,12 +291,12 @@
 				25CFF69116B34C25002E4913 /* InfoPlist.strings in Resources */,
 				25CFF69B16B34C25002E4913 /* Default@2x.png in Resources */,
 				25CFF69D16B34C25002E4913 /* Default-568h@2x.png in Resources */,
-				255E305916B35ECA003CA4FD /* MAEventCreationViewController.xib in Resources */,
 				251B54BE16B37CE900518258 /* MASingleEventViewController.xib in Resources */,
 				2559D81316B397AB00A08A66 /* DroidSans.ttf in Resources */,
 				252C766E16B3A7E300E14940 /* raleway_thin.ttf in Resources */,
 				252C767216B3B1BA00E14940 /* tabbarbkgd.png in Resources */,
 				252C767C16B3E24600E14940 /* Default.png in Resources */,
+				25D9EABD16B438F700FB3C13 /* buttoncircle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

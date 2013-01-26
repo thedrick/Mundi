@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 @implementation MACreateEventView
-@synthesize addLabel, eventName, date, time, location, category, details;
+@synthesize addLabel, eventName, date, time, location, category, details, nextButton;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -19,7 +19,7 @@
         self.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1];
         addLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
         eventName = [[UITextField alloc] initWithFrame:CGRectMake(10,
-                     addLabel.frame.origin.y + addLabel.frame.size.height + 10,
+                     addLabel.frame.origin.y + addLabel.frame.size.height,
                      300, 40)];
         date = [[UITextField alloc] initWithFrame:CGRectMake(10,
                                                              eventName.frame.origin.y + eventName.frame.size.height + 10,
@@ -27,7 +27,10 @@
         time = [[UITextField alloc] initWithFrame:CGRectMake(10 + date.frame.size.width + 6, date.frame.origin.y, 120, 40)];
         location = [[UITextField alloc] initWithFrame:CGRectMake(10, time.frame.origin.y + time.frame.size.height + 10, 300, 40)];
         category = [[UITextField alloc] initWithFrame:CGRectMake(10, location.frame.origin.y + location.frame.size.height + 10, 300, 40)];
-        details = [[UITextView alloc] initWithFrame:CGRectMake(10, category.frame.origin.y + category.frame.size.height + 10, 300, 120)];
+        details = [[UITextView alloc] initWithFrame:CGRectMake(10, category.frame.origin.y + category.frame.size.height + 10, 300, 100)];
+        nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        nextButton.frame = CGRectMake(270, 410, 60, 60);
+        nextButton.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"buttoncircle.png"]];
         
         [self addSubview:addLabel];
         [self addSubview:eventName];
@@ -36,6 +39,7 @@
         [self addSubview:location];
         [self addSubview:category];
         [self addSubview:details];
+        [self addSubview:nextButton];
         [self loadContent];
     }
     
@@ -46,6 +50,7 @@
 {
     UIFont *titleFont = [UIFont fontWithName:@"Raleway" size:120];
     UIFont *placeholderFont = [UIFont fontWithName:@"DroidSans" size:18];
+    UIFont *detailFont = [UIFont fontWithName:@"DroidSans" size:14];
     UIColor *regularColor = [UIColor colorWithWhite:0.3 alpha:1];
     
     [addLabel setFont:titleFont];
@@ -60,7 +65,7 @@
     [time setFont:placeholderFont];
     [location setFont:placeholderFont];
     [category setFont:placeholderFont];
-    [details setFont:placeholderFont];
+    [details setFont:detailFont];
     
     [eventName setBorderStyle:UITextBorderStyleLine];
     [date setBorderStyle:UITextBorderStyleLine];
@@ -70,6 +75,7 @@
     details.layer.borderColor = [[UIColor grayColor] CGColor];
     details.layer.borderWidth = 0.5f;
     details.layer.cornerRadius = 2;
+    details.textColor = regularColor;
     
     eventName.layer.borderColor = [[UIColor lightGrayColor] CGColor];
     eventName.layer.borderWidth = 0.5f;
@@ -95,6 +101,8 @@
     category.layer.borderWidth = 0.7f;
     category.layer.cornerRadius = 4;
     category.backgroundColor = [UIColor whiteColor];
+    
+    nextButton.titleLabel.text = @"Next";
 
     eventName.placeholder = @"Event name";
     date.placeholder = @"Date";

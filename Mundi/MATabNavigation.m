@@ -8,6 +8,7 @@
 
 #import "MATabNavigation.h"
 #import <Parse/Parse.h>
+#import "MAEventCreationViewController.h"
 
 @implementation MATabNavigation
 
@@ -38,6 +39,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    if ([[item title] isEqualToString:@"+"]) {
+        MAEventCreationViewController *eventCreate = [[MAEventCreationViewController alloc] init];
+        [self presentViewController:eventCreate animated:YES completion:nil];
+    }
 }
 
 @end

@@ -16,4 +16,5 @@
 @property (nonatomic, strong) UITextField *location;
 @property (nonatomic, strong) UITextField *category;
 @property (nonatomic, strong) UITextView *details;
+@property (nonatomic, strong) UIButton *nextButton;
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MATabNavigation : UITabBarController
+@interface MATabNavigation : UITabBarController <UITabBarControllerDelegate>
 
 @end
