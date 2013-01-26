@@ -37,6 +37,9 @@
     UIFont *timeFont = [UIFont fontWithName:@"DroidSans" size:36];
     UIColor *regularColor = [UIColor colorWithWhite:0.3 alpha:1];
     UIColor *poppy = [UIColor colorWithRed:(248/255.0f) green:(102/255.0f) blue:(41/255.0f) alpha:1];
+    UIColor *turquoise = [UIColor colorWithRed:(0/255.0f) green:(200/255.0f) blue:(184/255.0f) alpha:1];
+    UIColor *blue = [UIColor colorWithRed:(85/255.0f) green:(95/255.0f) blue:(255/255.0f) alpha:1];
+    UIColor *red = [UIColor colorWithRed:(190/255.0f) green:(0/255.0f) blue:(0/255.0f) alpha:1];
     
     // Title
     [eventTitle setText:[object objectForKey:@"name"]];
@@ -63,9 +66,21 @@
     // Time
     [timeLabel setText:[object objectForKey:@"time"]];
     [timeLabel setBackgroundColor:[UIColor clearColor]];
-    [timeLabel setTextColor:poppy];
     [timeLabel setFont:timeFont];
+
+    NSString *eventCategory = [object objectForKey:@"category"];
     
+    if([eventCategory isEqualToString:@"Food & Drink"]){
+        [timeLabel setTextColor:poppy];    
+    } else if([eventCategory isEqualToString:@"Chill"]){
+        [timeLabel setTextColor:turquoise];
+    } else if([eventCategory isEqualToString:@"Adventure"]){
+        [timeLabel setTextColor:blue];
+    } else if([eventCategory isEqualToString:@"Outdoors"]) {
+        [timeLabel setTextColor:red];
+    }
+    
+
     [self.contentView addSubview:eventTitle];
     [self.contentView addSubview:eventDetails];
     [self.contentView addSubview:eventDate];
