@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		251B54BD16B37CE900518258 /* MASingleEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 251B54BB16B37CE900518258 /* MASingleEventViewController.m */; };
 		251B54BE16B37CE900518258 /* MASingleEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 251B54BC16B37CE900518258 /* MASingleEventViewController.xib */; };
+		252C766E16B3A7E300E14940 /* raleway_thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 252C766D16B3A7E300E14940 /* raleway_thin.ttf */; };
+		252C767216B3B1BA00E14940 /* tabbarbkgd.png in Resources */ = {isa = PBXBuildFile; fileRef = 252C767116B3B1BA00E14940 /* tabbarbkgd.png */; };
+		252C767516B3B41700E14940 /* MACreateEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 252C767416B3B41700E14940 /* MACreateEventView.m */; };
+		252C767A16B3CD4B00E14940 /* MASingleEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 252C767916B3CD4A00E14940 /* MASingleEventView.m */; };
+		252C767C16B3E24600E14940 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 252C767B16B3E24600E14940 /* Default.png */; };
+		252C767F16B4176A00E14940 /* MAProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 252C767E16B4176A00E14940 /* MAProfileView.m */; };
 		252E512216B34D2E0057D2D1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512116B34D2E0057D2D1 /* Parse.framework */; };
 		252E513116B34D9D0057D2D1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512416B34D9D0057D2D1 /* Accounts.framework */; };
 		252E513216B34D9D0057D2D1 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512516B34D9D0057D2D1 /* AdSupport.framework */; };
@@ -24,12 +30,8 @@
 		252E513C16B34D9D0057D2D1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512F16B34D9D0057D2D1 /* StoreKit.framework */; };
 		252E513D16B34D9D0057D2D1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E513016B34D9D0057D2D1 /* SystemConfiguration.framework */; };
 		252E514016B34F280057D2D1 /* MATabNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 252E513F16B34F280057D2D1 /* MATabNavigation.m */; };
-<<<<<<< HEAD
-		2559D80C16B38F3700A08A66 /* MAFeedViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2559D80B16B38F3700A08A66 /* MAFeedViewCell.m */; };
-		2559D81316B397AB00A08A66 /* DroidSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2559D81216B397AB00A08A66 /* DroidSans.ttf */; };
-=======
 		2559D80C16B38F3700A08A66 /* MAEventViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2559D80B16B38F3700A08A66 /* MAEventViewCell.m */; };
->>>>>>> 9b98abe52546f57bf766a79a8a8042b25081206f
+		2559D81316B397AB00A08A66 /* DroidSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2559D81216B397AB00A08A66 /* DroidSans.ttf */; };
 		255E304916B3548F003CA4FD /* MAMainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E304816B3548F003CA4FD /* MAMainNavController.m */; };
 		255E304D16B35673003CA4FD /* MAEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E304C16B35673003CA4FD /* MAEventViewController.m */; };
 		255E305816B35ECA003CA4FD /* MAEventCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E305616B35ECA003CA4FD /* MAEventCreationViewController.m */; };
@@ -40,17 +42,29 @@
 		25CFF69116B34C25002E4913 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF68F16B34C25002E4913 /* InfoPlist.strings */; };
 		25CFF69316B34C25002E4913 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CFF69216B34C25002E4913 /* main.m */; };
 		25CFF69716B34C25002E4913 /* MAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CFF69616B34C25002E4913 /* MAAppDelegate.m */; };
-		25CFF69916B34C25002E4913 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69816B34C25002E4913 /* Default.png */; };
 		25CFF69B16B34C25002E4913 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69A16B34C25002E4913 /* Default@2x.png */; };
 		25CFF69D16B34C25002E4913 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69C16B34C25002E4913 /* Default-568h@2x.png */; };
 		25F677D216B386FD00365BD2 /* MAProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F677D016B386FD00365BD2 /* MAProfileViewController.m */; };
+<<<<<<< HEAD
+=======
 		25F677D316B386FD00365BD2 /* MAProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25F677D116B386FD00365BD2 /* MAProfileViewController.xib */; };
+		2AAA8EEB16B41C8200398C47 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAA8EEA16B41C8200398C47 /* FacebookSDK.framework */; };
+>>>>>>> b90f3b0536bd16e5772f18c99af05f55d870c08d
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		251B54BA16B37CE900518258 /* MASingleEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASingleEventViewController.h; sourceTree = "<group>"; };
 		251B54BB16B37CE900518258 /* MASingleEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASingleEventViewController.m; sourceTree = "<group>"; };
 		251B54BC16B37CE900518258 /* MASingleEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASingleEventViewController.xib; sourceTree = "<group>"; };
+		252C766D16B3A7E300E14940 /* raleway_thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = raleway_thin.ttf; sourceTree = "<group>"; };
+		252C767116B3B1BA00E14940 /* tabbarbkgd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarbkgd.png; sourceTree = "<group>"; };
+		252C767316B3B41700E14940 /* MACreateEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACreateEventView.h; sourceTree = "<group>"; };
+		252C767416B3B41700E14940 /* MACreateEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACreateEventView.m; sourceTree = "<group>"; };
+		252C767816B3CD4A00E14940 /* MASingleEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASingleEventView.h; sourceTree = "<group>"; };
+		252C767916B3CD4A00E14940 /* MASingleEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASingleEventView.m; sourceTree = "<group>"; };
+		252C767B16B3E24600E14940 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		252C767D16B4176A00E14940 /* MAProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProfileView.h; sourceTree = "<group>"; };
+		252C767E16B4176A00E14940 /* MAProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProfileView.m; sourceTree = "<group>"; };
 		252E512116B34D2E0057D2D1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		252E512416B34D9D0057D2D1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		252E512516B34D9D0057D2D1 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -67,15 +81,9 @@
 		252E513016B34D9D0057D2D1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		252E513E16B34F280057D2D1 /* MATabNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATabNavigation.h; sourceTree = "<group>"; };
 		252E513F16B34F280057D2D1 /* MATabNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATabNavigation.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		2559D80A16B38F3700A08A66 /* MAFeedViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAFeedViewCell.h; path = ../MAFeedViewCell.h; sourceTree = "<group>"; };
-		2559D80B16B38F3700A08A66 /* MAFeedViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAFeedViewCell.m; path = ../MAFeedViewCell.m; sourceTree = "<group>"; };
-		2559D81116B3979700A08A66 /* Raleway Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway Thin.ttf"; sourceTree = "<group>"; };
-		2559D81216B397AB00A08A66 /* DroidSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSans.ttf; sourceTree = "<group>"; };
-=======
 		2559D80A16B38F3700A08A66 /* MAEventViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAEventViewCell.h; path = ../MAEventViewCell.h; sourceTree = "<group>"; };
 		2559D80B16B38F3700A08A66 /* MAEventViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAEventViewCell.m; path = ../MAEventViewCell.m; sourceTree = "<group>"; };
->>>>>>> 9b98abe52546f57bf766a79a8a8042b25081206f
+		2559D81216B397AB00A08A66 /* DroidSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSans.ttf; sourceTree = "<group>"; };
 		255E304716B3548F003CA4FD /* MAMainNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMainNavController.h; sourceTree = "<group>"; };
 		255E304816B3548F003CA4FD /* MAMainNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMainNavController.m; sourceTree = "<group>"; };
 		255E304B16B35673003CA4FD /* MAEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAEventViewController.h; sourceTree = "<group>"; };
@@ -93,12 +101,15 @@
 		25CFF69416B34C25002E4913 /* Mundi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mundi-Prefix.pch"; sourceTree = "<group>"; };
 		25CFF69516B34C25002E4913 /* MAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAAppDelegate.h; sourceTree = "<group>"; };
 		25CFF69616B34C25002E4913 /* MAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAAppDelegate.m; sourceTree = "<group>"; };
-		25CFF69816B34C25002E4913 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		25CFF69A16B34C25002E4913 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		25CFF69C16B34C25002E4913 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		25F677CF16B386FD00365BD2 /* MAProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProfileViewController.h; sourceTree = "<group>"; };
 		25F677D016B386FD00365BD2 /* MAProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProfileViewController.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
 		25F677D116B386FD00365BD2 /* MAProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MAProfileViewController.xib; sourceTree = "<group>"; };
+		2AAA8EEA16B41C8200398C47 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+>>>>>>> b90f3b0536bd16e5772f18c99af05f55d870c08d
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,12 +134,47 @@
 				25CFF68716B34C25002E4913 /* UIKit.framework in Frameworks */,
 				25CFF68916B34C25002E4913 /* Foundation.framework in Frameworks */,
 				252E512216B34D2E0057D2D1 /* Parse.framework in Frameworks */,
+				2AAA8EEB16B41C8200398C47 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		252C767616B3B41D00E14940 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				252C767816B3CD4A00E14940 /* MASingleEventView.h */,
+				252C767916B3CD4A00E14940 /* MASingleEventView.m */,
+				252C767316B3B41700E14940 /* MACreateEventView.h */,
+				252C767416B3B41700E14940 /* MACreateEventView.m */,
+				2559D80A16B38F3700A08A66 /* MAEventViewCell.h */,
+				2559D80B16B38F3700A08A66 /* MAEventViewCell.m */,
+				252C767D16B4176A00E14940 /* MAProfileView.h */,
+				252C767E16B4176A00E14940 /* MAProfileView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		252C767716B3B42B00E14940 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				255E304716B3548F003CA4FD /* MAMainNavController.h */,
+				255E304816B3548F003CA4FD /* MAMainNavController.m */,
+				255E305516B35EC9003CA4FD /* MAEventCreationViewController.h */,
+				255E305616B35ECA003CA4FD /* MAEventCreationViewController.m */,
+				255E304B16B35673003CA4FD /* MAEventViewController.h */,
+				255E304C16B35673003CA4FD /* MAEventViewController.m */,
+				251B54BA16B37CE900518258 /* MASingleEventViewController.h */,
+				251B54BB16B37CE900518258 /* MASingleEventViewController.m */,
+				25F677CF16B386FD00365BD2 /* MAProfileViewController.h */,
+				25F677D016B386FD00365BD2 /* MAProfileViewController.m */,
+				252E513E16B34F280057D2D1 /* MATabNavigation.h */,
+				252E513F16B34F280057D2D1 /* MATabNavigation.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		25CFF67716B34C25002E4913 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +195,7 @@
 		25CFF68516B34C25002E4913 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2AAA8EEA16B41C8200398C47 /* FacebookSDK.framework */,
 				252E512416B34D9D0057D2D1 /* Accounts.framework */,
 				252E512516B34D9D0057D2D1 /* AdSupport.framework */,
 				252E512616B34D9D0057D2D1 /* AudioToolbox.framework */,
@@ -173,25 +220,12 @@
 		25CFF68C16B34C25002E4913 /* Mundi */ = {
 			isa = PBXGroup;
 			children = (
+				252C767716B3B42B00E14940 /* Controllers */,
+				252C767616B3B41D00E14940 /* Views */,
 				25CFF69516B34C25002E4913 /* MAAppDelegate.h */,
 				25CFF69616B34C25002E4913 /* MAAppDelegate.m */,
-				255E304716B3548F003CA4FD /* MAMainNavController.h */,
-				255E304816B3548F003CA4FD /* MAMainNavController.m */,
-				255E305516B35EC9003CA4FD /* MAEventCreationViewController.h */,
-				255E305616B35ECA003CA4FD /* MAEventCreationViewController.m */,
 				255E305716B35ECA003CA4FD /* MAEventCreationViewController.xib */,
-				252E513E16B34F280057D2D1 /* MATabNavigation.h */,
-				252E513F16B34F280057D2D1 /* MATabNavigation.m */,
-				255E304B16B35673003CA4FD /* MAEventViewController.h */,
-				255E304C16B35673003CA4FD /* MAEventViewController.m */,
-				2559D80A16B38F3700A08A66 /* MAEventViewCell.h */,
-				2559D80B16B38F3700A08A66 /* MAEventViewCell.m */,
-				251B54BA16B37CE900518258 /* MASingleEventViewController.h */,
-				251B54BB16B37CE900518258 /* MASingleEventViewController.m */,
 				251B54BC16B37CE900518258 /* MASingleEventViewController.xib */,
-				25F677CF16B386FD00365BD2 /* MAProfileViewController.h */,
-				25F677D016B386FD00365BD2 /* MAProfileViewController.m */,
-				25F677D116B386FD00365BD2 /* MAProfileViewController.xib */,
 				25CFF68D16B34C25002E4913 /* Supporting Files */,
 			);
 			path = Mundi;
@@ -200,13 +234,14 @@
 		25CFF68D16B34C25002E4913 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2559D81116B3979700A08A66 /* Raleway Thin.ttf */,
+				252C767B16B3E24600E14940 /* Default.png */,
+				252C767116B3B1BA00E14940 /* tabbarbkgd.png */,
+				252C766D16B3A7E300E14940 /* raleway_thin.ttf */,
 				2559D81216B397AB00A08A66 /* DroidSans.ttf */,
 				25CFF68E16B34C25002E4913 /* Mundi-Info.plist */,
 				25CFF68F16B34C25002E4913 /* InfoPlist.strings */,
 				25CFF69216B34C25002E4913 /* main.m */,
 				25CFF69416B34C25002E4913 /* Mundi-Prefix.pch */,
-				25CFF69816B34C25002E4913 /* Default.png */,
 				25CFF69A16B34C25002E4913 /* Default@2x.png */,
 				25CFF69C16B34C25002E4913 /* Default-568h@2x.png */,
 			);
@@ -266,13 +301,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				25CFF69116B34C25002E4913 /* InfoPlist.strings in Resources */,
-				25CFF69916B34C25002E4913 /* Default.png in Resources */,
 				25CFF69B16B34C25002E4913 /* Default@2x.png in Resources */,
 				25CFF69D16B34C25002E4913 /* Default-568h@2x.png in Resources */,
 				255E305916B35ECA003CA4FD /* MAEventCreationViewController.xib in Resources */,
 				251B54BE16B37CE900518258 /* MASingleEventViewController.xib in Resources */,
-				25F677D316B386FD00365BD2 /* MAProfileViewController.xib in Resources */,
 				2559D81316B397AB00A08A66 /* DroidSans.ttf in Resources */,
+				252C766E16B3A7E300E14940 /* raleway_thin.ttf in Resources */,
+				252C767216B3B1BA00E14940 /* tabbarbkgd.png in Resources */,
+				252C767C16B3E24600E14940 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +328,9 @@
 				251B54BD16B37CE900518258 /* MASingleEventViewController.m in Sources */,
 				25F677D216B386FD00365BD2 /* MAProfileViewController.m in Sources */,
 				2559D80C16B38F3700A08A66 /* MAEventViewCell.m in Sources */,
+				252C767516B3B41700E14940 /* MACreateEventView.m in Sources */,
+				252C767A16B3CD4B00E14940 /* MASingleEventView.m in Sources */,
+				252C767F16B4176A00E14940 /* MAProfileView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
