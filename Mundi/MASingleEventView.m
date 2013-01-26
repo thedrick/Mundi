@@ -11,6 +11,7 @@
 @implementation MASingleEventView
 @synthesize eventTitle, creatorLabel, dateLabel, timeLabel, locationLabel, detailLabel;
 @synthesize eventDetailView, eventTimeView, photoCollectionView;
+@synthesize joinButton;
 
 - (id)initWithFrame:(CGRect)frame
 {
