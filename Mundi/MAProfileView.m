@@ -7,6 +7,7 @@
 //
 
 #import "MAProfileView.h"
+#import <Parse/Parse.h>
 
 @implementation MAProfileView
 @synthesize usernameLabel, locationLabel, profilePicture, addToGroupButton, inviteToEventButton;
@@ -31,16 +32,32 @@
 
 - (void)loadContent
 {
+    PFUser *user = [PFUser currentUser];
+    NSString *userId = [user objectForKey:@"facebookId"];
+    NSString *pictureURL = [user objectForKey:@"pictureURL"];
+    //
+//    PF_FBProfilePictureView *userProfilePicture = [[PF_FBProfilePictureView alloc] init];
+//    userProfilePicture.profileID = userId;
+//    profilePicture = [userProfilePicture init];
+    
+    //    profilePicture = [userProfilePicture initWithProfileID:userId pictureCropping:PF_FBProfilePictureCroppingSquare];
+
+    NSURL *profilePictureURL = [NSURL URLWithString:pictureURL];
+    NSData *imageData = [NSData dataWithContentsOfURL:profilePictureURL];
+    UIImage *image = [UIImage imageWithData:imageData];
+    
+    [profilePicture setImage:image];
+    
     UIFont *titleFont = [UIFont fontWithName:@"Raleway" size:60];
     UIFont *locationFont = [UIFont fontWithName:@"DroidSans" size:11];
     UIColor *fontColor = [UIColor colorWithWhite:0.2 alpha:1];
-    usernameLabel.text = @"Tyler Hedrick";
+    usernameLabel.text = [user objectForKey:@"facebookName"];
     usernameLabel.font = titleFont;
     usernameLabel.lineBreakMode = NSLineBreakByWordWrapping;
     usernameLabel.numberOfLines = 2;
     usernameLabel.textColor = fontColor;
     
-    locationLabel.text = @"PITTSBURGH, PENNSYLVANIA";
+    locationLabel.text = [user objectForKey:@"locationString"];
     locationLabel.font = locationFont;
     locationLabel.lineBreakMode = NSLineBreakByWordWrapping;
     locationLabel.numberOfLines = 1;
@@ -48,6 +65,7 @@
     
     [self addSubview:usernameLabel];
     [self addSubview:locationLabel];
+    [self addSubview:profilePicture];
 }
 
 
