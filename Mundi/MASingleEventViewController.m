@@ -36,7 +36,10 @@
     eventView.timeLabel.text = [object objectForKey:@"time"];
     eventView.dateLabel.text = [object objectForKey:@"date"];
     eventView.detailLabel.text = [object objectForKey:@"details"];
+    [eventView.joinButton addTarget:self action:@selector(joinEvent) forControlEvents:UIControlEventTouchUpInside];
+    [eventView.attendeesButton addTarget:self action:@selector(viewAttendees) forControlEvents:UIControlEventTouchUpInside];
     self.view = eventView;
+    
 }
 
 - (void)viewDidLoad
@@ -142,4 +145,12 @@
     [object saveInBackground];
     [user saveInBackground];
 }
+
+
+- (IBAction)joinEvent:(id)sender){
+}
+
+- (IBAction)viewAttendees:(id)sender {
+}
+
 @end
