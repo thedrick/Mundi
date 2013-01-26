@@ -147,7 +147,7 @@
 }
 
 
-- (IBAction)joinEvent:(id)sender){
+- (IBAction)joinEvent:(id)sender {
 }
 
 - (IBAction)viewAttendees:(id)sender {

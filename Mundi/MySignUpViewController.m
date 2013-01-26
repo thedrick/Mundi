@@ -38,6 +38,11 @@
     self.signUpView.usernameField.borderStyle = UITextBorderStyleRoundedRect;
     self.signUpView.passwordField.borderStyle = UITextBorderStyleRoundedRect;
     self.signUpView.emailField.borderStyle = UITextBorderStyleRoundedRect;
+    
+    // Set field text color
+    [self.signUpView.usernameField setTextColor:[UIColor blackColor]];
+    [self.signUpView.passwordField setTextColor:[UIColor blackColor ]];
+    [self.signUpView.emailField setTextColor:[UIColor blackColor ]];
 }
 
 - (void)didReceiveMemoryWarning
