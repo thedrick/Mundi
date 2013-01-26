@@ -99,6 +99,9 @@
     name = myView.eventName.text;
     date = myView.date.text;
     
+    PFObject *user = [PFUser currentUser];
+    PFObject *newEvent = [PFObject objectWithClassName:@"Event"];
+    
     if (!time || !locationString || !category || !name || !date) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event Invalid"
                                                         message:@"Make sure you fill out all fields"
@@ -107,33 +110,20 @@
                                               otherButtonTitles:nil, nil];
         [alert show];
     } else {
-        PFObject *newEvent = [PFObject objectWithClassName:@"Event"];
+        NSString *userName = user.objectId;
+        
         [newEvent setObject:name forKey:@"name"];
         [newEvent setObject:locationString forKey:@"locationString"];
         [newEvent setObject:category forKey:@"category"];
-        [newEvent setObject:@"" forKey:@"attendees"];
+        [newEvent setObject:userName forKey:@"attendees"];
         [newEvent setObject:time forKey:@"time"];
         [newEvent setObject:date forKey:@"date"];
-        PFObject *user = [PFUser currentUser];
-        [newEvent setObject:user.objectId forKey:@"createdBy"];
+        [newEvent setObject:userName forKey:@"createdBy"];
         [newEvent setObject:[user objectForKey:@"facebookName"] forKey:@"creatorUsername"];
         [newEvent setObject:myView.details.text forKey:@"details"];
         
-        [newEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (succeeded) {
-                [newEvent refresh];
-                NSString *eventId = newEvent.objectId;
-                NSString *eventIdComma = [@", " stringByAppendingString:eventId];
-                NSString *userCreatedEvents = [user objectForKey:@"createdEvents"];
-                NSString *userCreatedEventsNew = [userCreatedEvents stringByAppendingString:eventIdComma];
-                [user setObject:userCreatedEventsNew forKey:@"createdEvents"];
-                
-                [user saveInBackground];
-            }
-        }];
+        [newEvent saveInBackground];
     }
-    
-    
-    
 }
+
 @end
