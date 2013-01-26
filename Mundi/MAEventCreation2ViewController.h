@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MAEventCreation2ViewController : UIViewController
-- (IBAction)publicOrPrivate:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UISwitch *publicOrPrivate;
 - (IBAction)invite:(id)sender;
 - (IBAction)inviteView:(id)sender;
 
