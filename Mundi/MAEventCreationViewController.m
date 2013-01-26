@@ -112,7 +112,6 @@
         facebookName = @"No Name";
     }
     
-    PFObject *user = [PFUser currentUser];
     PFObject *newEvent = [PFObject objectWithClassName:@"Event"];
     
     if (!time || !locationString || !category || !name || !date) {
