@@ -24,8 +24,14 @@
     if (self) {
         UITabBarItem *tbi = [self tabBarItem];
         [tbi setTitle:@"Explore"];
-        self.tableView.backgroundView = nil;
-        self.tableView.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1];
+        
+        [tbi setTitlePositionAdjustment:UIOffsetMake(0.0, -10.0)];
+        
+        [tbi setTitleTextAttributes:
+         [NSDictionary dictionaryWithObjectsAndKeys:
+          [UIColor whiteColor], UITextAttributeTextColor,
+          [UIFont fontWithName:@"HelveticaNeue" size:26.0], UITextAttributeFont,
+          nil] forState:UIControlStateNormal];
     }
     return self;
 }
