@@ -13,6 +13,7 @@
 		252C767216B3B1BA00E14940 /* tabbarbkgd.png in Resources */ = {isa = PBXBuildFile; fileRef = 252C767116B3B1BA00E14940 /* tabbarbkgd.png */; };
 		252C767516B3B41700E14940 /* MACreateEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 252C767416B3B41700E14940 /* MACreateEventView.m */; };
 		252C767A16B3CD4B00E14940 /* MASingleEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 252C767916B3CD4A00E14940 /* MASingleEventView.m */; };
+		252C767C16B3E24600E14940 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 252C767B16B3E24600E14940 /* Default.png */; };
 		252E512216B34D2E0057D2D1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512116B34D2E0057D2D1 /* Parse.framework */; };
 		252E513116B34D9D0057D2D1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512416B34D9D0057D2D1 /* Accounts.framework */; };
 		252E513216B34D9D0057D2D1 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252E512516B34D9D0057D2D1 /* AdSupport.framework */; };
@@ -40,7 +41,6 @@
 		25CFF69116B34C25002E4913 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF68F16B34C25002E4913 /* InfoPlist.strings */; };
 		25CFF69316B34C25002E4913 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CFF69216B34C25002E4913 /* main.m */; };
 		25CFF69716B34C25002E4913 /* MAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CFF69616B34C25002E4913 /* MAAppDelegate.m */; };
-		25CFF69916B34C25002E4913 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69816B34C25002E4913 /* Default.png */; };
 		25CFF69B16B34C25002E4913 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69A16B34C25002E4913 /* Default@2x.png */; };
 		25CFF69D16B34C25002E4913 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25CFF69C16B34C25002E4913 /* Default-568h@2x.png */; };
 		25F677D216B386FD00365BD2 /* MAProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F677D016B386FD00365BD2 /* MAProfileViewController.m */; };
@@ -57,6 +57,7 @@
 		252C767416B3B41700E14940 /* MACreateEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACreateEventView.m; sourceTree = "<group>"; };
 		252C767816B3CD4A00E14940 /* MASingleEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASingleEventView.h; sourceTree = "<group>"; };
 		252C767916B3CD4A00E14940 /* MASingleEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASingleEventView.m; sourceTree = "<group>"; };
+		252C767B16B3E24600E14940 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		252E512116B34D2E0057D2D1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		252E512416B34D9D0057D2D1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		252E512516B34D9D0057D2D1 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -93,7 +94,6 @@
 		25CFF69416B34C25002E4913 /* Mundi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mundi-Prefix.pch"; sourceTree = "<group>"; };
 		25CFF69516B34C25002E4913 /* MAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAAppDelegate.h; sourceTree = "<group>"; };
 		25CFF69616B34C25002E4913 /* MAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAAppDelegate.m; sourceTree = "<group>"; };
-		25CFF69816B34C25002E4913 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		25CFF69A16B34C25002E4913 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		25CFF69C16B34C25002E4913 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		25F677CF16B386FD00365BD2 /* MAProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProfileViewController.h; sourceTree = "<group>"; };
@@ -220,6 +220,7 @@
 		25CFF68D16B34C25002E4913 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				252C767B16B3E24600E14940 /* Default.png */,
 				252C767116B3B1BA00E14940 /* tabbarbkgd.png */,
 				252C766D16B3A7E300E14940 /* raleway_thin.ttf */,
 				2559D81216B397AB00A08A66 /* DroidSans.ttf */,
@@ -227,7 +228,6 @@
 				25CFF68F16B34C25002E4913 /* InfoPlist.strings */,
 				25CFF69216B34C25002E4913 /* main.m */,
 				25CFF69416B34C25002E4913 /* Mundi-Prefix.pch */,
-				25CFF69816B34C25002E4913 /* Default.png */,
 				25CFF69A16B34C25002E4913 /* Default@2x.png */,
 				25CFF69C16B34C25002E4913 /* Default-568h@2x.png */,
 			);
@@ -287,7 +287,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				25CFF69116B34C25002E4913 /* InfoPlist.strings in Resources */,
-				25CFF69916B34C25002E4913 /* Default.png in Resources */,
 				25CFF69B16B34C25002E4913 /* Default@2x.png in Resources */,
 				25CFF69D16B34C25002E4913 /* Default-568h@2x.png in Resources */,
 				255E305916B35ECA003CA4FD /* MAEventCreationViewController.xib in Resources */,
@@ -296,6 +295,7 @@
 				2559D81316B397AB00A08A66 /* DroidSans.ttf in Resources */,
 				252C766E16B3A7E300E14940 /* raleway_thin.ttf in Resources */,
 				252C767216B3B1BA00E14940 /* tabbarbkgd.png in Resources */,
+				252C767C16B3E24600E14940 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
