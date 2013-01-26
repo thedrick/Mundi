@@ -8,6 +8,7 @@
 
 #import "MASingleEventViewController.h"
 #import "MASingleEventView.h"
+#import "MAAttendeesViewController.h";
 
 @interface MASingleEventViewController ()
 
@@ -36,8 +37,12 @@
     eventView.timeLabel.text = [object objectForKey:@"time"];
     eventView.dateLabel.text = [object objectForKey:@"date"];
     eventView.detailLabel.text = [object objectForKey:@"details"];
-    [eventView.joinButton addTarget:self action:@selector(joinEvent) forControlEvents:UIControlEventTouchUpInside];
-    [eventView.attendeesButton addTarget:self action:@selector(viewAttendees) forControlEvents:UIControlEventTouchUpInside];
+    [eventView.joinButton addTarget:self
+                             action:@selector(joinEvent:)
+                   forControlEvents:UIControlEventTouchUpInside];
+    [eventView.attendeesButton addTarget:self
+                                  action:@selector(viewAttendees:)
+                        forControlEvents:UIControlEventTouchUpInside];
     self.view = eventView;
     
 }
@@ -67,6 +72,7 @@
 {
     [super viewWillAppear:animated];
     self.navigationItem.title = [object objectForKey:@"name"];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     
     UISwipeGestureRecognizer *swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self
                                                                                           action:@selector(swipeBack:)];
@@ -150,7 +156,23 @@
 - (IBAction)joinEvent:(id)sender {
 }
 
-- (IBAction)viewAttendees:(id)sender {
+- (IBAction)viewAttendees:(id)sender
+{
+    PFUser *user = [PFUser currentUser];
+    
+    NSString *attendees = [object objectForKey:@"attendees"];
+    NSArray *eventAttendees;
+    
+    if(attendees == nil){
+        //creator is only attendee
+        eventAttendees = [NSArray arrayWithObjects:user.objectId, nil];
+    } else {
+        NSString *attendeesOnly = [attendees stringByReplacingOccurrencesOfString:@", " withString:@" "];
+        eventAttendees = [attendeesOnly componentsSeparatedByString:@" "];
+    }
+    MAAttendeesViewController *attendeesVC = [[MAAttendeesViewController alloc] initWithAttendees:eventAttendees];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.navigationController pushViewController:attendeesVC animated:YES];
 }
 
 @end

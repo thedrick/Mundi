@@ -55,13 +55,14 @@
     [[self.tabBarController navigationItem] setRightBarButtonItem:bbi];
     self.tableView.backgroundView = nil;
     [self.view setBackgroundColor:[UIColor colorWithWhite:0.95 alpha:1]];
+    [self loadEvents];
 }
 
 - (void)loadEvents
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-    [query addAscendingOrder:@"date"];
-    [query setCachePolicy:kPFCachePolicyCacheThenNetwork];
+    [query addDescendingOrder:@"createdAt"];
+    [query setCachePolicy:kPFCachePolicyNetworkOnly];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
             NSLog(@"Error: %@", [error localizedDescription]);
@@ -79,6 +80,7 @@
     [navController setModalPresentationStyle:UIModalPresentationFormSheet];
     
     [self presentViewController:navController animated:YES completion:^{
+        [self loadEvents];
         [self.tableView reloadData];
     }];
 }

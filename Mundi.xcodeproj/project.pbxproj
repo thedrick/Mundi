@@ -46,6 +46,7 @@
 		25B8A55916B4696A007BBBD5 /* events.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A55816B4696A007BBBD5 /* events.png */; };
 		25B8A55B16B4696F007BBBD5 /* groups.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A55A16B4696F007BBBD5 /* groups.png */; };
 		25B8A55D16B46975007BBBD5 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A55C16B46975007BBBD5 /* settings.png */; };
+		25C3211E16B472DE003C9D92 /* MAAttendeesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C3211D16B472DE003C9D92 /* MAAttendeesViewController.m */; };
 		25CFF68716B34C25002E4913 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68616B34C25002E4913 /* UIKit.framework */; };
 		25CFF68916B34C25002E4913 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68816B34C25002E4913 /* Foundation.framework */; };
 		25CFF68B16B34C25002E4913 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68A16B34C25002E4913 /* CoreGraphics.framework */; };
@@ -118,6 +119,8 @@
 		25B8A55816B4696A007BBBD5 /* events.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = events.png; sourceTree = "<group>"; };
 		25B8A55A16B4696F007BBBD5 /* groups.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = groups.png; sourceTree = "<group>"; };
 		25B8A55C16B46975007BBBD5 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		25C3211C16B472DE003C9D92 /* MAAttendeesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAttendeesViewController.h; sourceTree = "<group>"; };
+		25C3211D16B472DE003C9D92 /* MAAttendeesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAttendeesViewController.m; sourceTree = "<group>"; };
 		25CFF68216B34C25002E4913 /* Mundi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mundi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25CFF68616B34C25002E4913 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		25CFF68816B34C25002E4913 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -216,6 +219,8 @@
 				0011B22116B4390B0088040B /* MyLogInViewController.m */,
 				0011B22A16B43E6D0088040B /* MySignUpViewController.h */,
 				0011B22B16B43E6D0088040B /* MySignUpViewController.m */,
+				25C3211C16B472DE003C9D92 /* MAAttendeesViewController.h */,
+				25C3211D16B472DE003C9D92 /* MAAttendeesViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -431,6 +436,7 @@
 				2A0F98F716B4520D00A4012C /* AFURLConnectionOperation.m in Sources */,
 				2A0F98F816B4520D00A4012C /* AFXMLRequestOperation.m in Sources */,
 				2A0F98F916B4520D00A4012C /* UIImageView+AFNetworking.m in Sources */,
+				25C3211E16B472DE003C9D92 /* MAAttendeesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
