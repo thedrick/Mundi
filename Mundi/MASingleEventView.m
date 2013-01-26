@@ -12,6 +12,7 @@
 @synthesize eventTitle, creatorLabel, dateLabel, timeLabel, locationLabel, detailLabel;
 @synthesize eventDetailView, eventTimeView, photoCollectionView;
 @synthesize joinButton;
+@synthesize attendeesButton;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -29,9 +30,26 @@
                                                                    70)];
         eventTimeView.backgroundColor = [UIColor whiteColor];
         eventDetailView.backgroundColor = [UIColor whiteColor];
+
+        //joinButton
+        joinButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [joinButton setTitle:@"join event" forState:UIControlStateNormal];
+        [joinButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        joinButton.titleLabel.font = [UIFont fontWithName:@"DroidSans" size:16.0];
+        joinButton.frame = CGRectMake(9, 325, 300, 45);
+    
+        //attendeesButton
+        attendeesButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [attendeesButton setTitle:@"view attendees" forState:UIControlStateNormal];
+        [attendeesButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        attendeesButton.titleLabel.font = [UIFont fontWithName:@"DroidSans" size:16.0];
+        attendeesButton.frame = CGRectMake(9, 380, 300, 45);
+        
         [self addSubview:eventTitle];
         [self addSubview:eventTimeView];
         [self addSubview:eventDetailView];
+        [self addSubview:joinButton];
+        [self addSubview: attendeesButton];
         
         UIFont *labelFont = [UIFont fontWithName:@"DroidSans" size:14];
         UIFont *titleFont = [UIFont fontWithName:@"Raleway" size:52];

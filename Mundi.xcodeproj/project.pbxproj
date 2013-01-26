@@ -10,6 +10,9 @@
 		0011B22216B4390B0088040B /* MyLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0011B22116B4390B0088040B /* MyLogInViewController.m */; };
 		0011B22C16B43E6D0088040B /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0011B22B16B43E6D0088040B /* MySignUpViewController.m */; };
 		0011B22F16B441570088040B /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0011B22E16B441570088040B /* bg.png */; };
+		0011B24516B46DAC0088040B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0011B24416B46DAC0088040B /* icon.png */; };
+		0011B24816B46DCC0088040B /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0011B24716B46DCC0088040B /* icon1.png */; };
+		0011B24A16B46E410088040B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0011B24916B46E410088040B /* Default.png */; };
 		251B54BD16B37CE900518258 /* MASingleEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 251B54BB16B37CE900518258 /* MASingleEventViewController.m */; };
 		251B54BE16B37CE900518258 /* MASingleEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 251B54BC16B37CE900518258 /* MASingleEventViewController.xib */; };
 		252C766E16B3A7E300E14940 /* raleway_thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 252C766D16B3A7E300E14940 /* raleway_thin.ttf */; };
@@ -70,6 +73,9 @@
 		0011B22A16B43E6D0088040B /* MySignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySignUpViewController.h; sourceTree = "<group>"; };
 		0011B22B16B43E6D0088040B /* MySignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySignUpViewController.m; sourceTree = "<group>"; };
 		0011B22E16B441570088040B /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		0011B24416B46DAC0088040B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		0011B24716B46DCC0088040B /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
+		0011B24916B46E410088040B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		251B54BA16B37CE900518258 /* MASingleEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASingleEventViewController.h; sourceTree = "<group>"; };
 		251B54BB16B37CE900518258 /* MASingleEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASingleEventViewController.m; sourceTree = "<group>"; };
 		251B54BC16B37CE900518258 /* MASingleEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASingleEventViewController.xib; sourceTree = "<group>"; };
@@ -217,6 +223,9 @@
 		25CFF67716B34C25002E4913 = {
 			isa = PBXGroup;
 			children = (
+				0011B24916B46E410088040B /* Default.png */,
+				0011B24716B46DCC0088040B /* icon1.png */,
+				0011B24416B46DAC0088040B /* icon.png */,
 				2A0F98DD16B4520D00A4012C /* AFNetworking */,
 				25CFF68C16B34C25002E4913 /* Mundi */,
 				25CFF68516B34C25002E4913 /* Frameworks */,
@@ -386,6 +395,9 @@
 				25B8A55916B4696A007BBBD5 /* events.png in Resources */,
 				25B8A55B16B4696F007BBBD5 /* groups.png in Resources */,
 				25B8A55D16B46975007BBBD5 /* settings.png in Resources */,
+				0011B24516B46DAC0088040B /* icon.png in Resources */,
+				0011B24816B46DCC0088040B /* icon1.png in Resources */,
+				0011B24A16B46E410088040B /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
