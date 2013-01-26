@@ -38,10 +38,11 @@
 		255E304D16B35673003CA4FD /* MAEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E304C16B35673003CA4FD /* MAEventViewController.m */; };
 		255E305816B35ECA003CA4FD /* MAEventCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E305616B35ECA003CA4FD /* MAEventCreationViewController.m */; };
 		25B8A54116B44CA5007BBBD5 /* plusbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A54016B44CA5007BBBD5 /* plusbutton.png */; };
-		25B8A54C16B457C8007BBBD5 /* buttoncircleDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A54B16B457C8007BBBD5 /* buttoncircleDown.png */; };
 		25B8A54F16B45AA8007BBBD5 /* tabbarbkgd.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A54E16B45AA8007BBBD5 /* tabbarbkgd.png */; };
-		25B8A55116B46292007BBBD5 /* Wingdings 2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A55016B46292007BBBD5 /* Wingdings 2.ttf */; };
-		25B8A55316B463A6007BBBD5 /* Webdings.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A55216B463A6007BBBD5 /* Webdings.ttf */; };
+		25B8A55716B4691B007BBBD5 /* buttoncircleDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A55616B4691B007BBBD5 /* buttoncircleDown.png */; };
+		25B8A55916B4696A007BBBD5 /* events.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A55816B4696A007BBBD5 /* events.png */; };
+		25B8A55B16B4696F007BBBD5 /* groups.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A55A16B4696F007BBBD5 /* groups.png */; };
+		25B8A55D16B46975007BBBD5 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A55C16B46975007BBBD5 /* settings.png */; };
 		25CFF68716B34C25002E4913 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68616B34C25002E4913 /* UIKit.framework */; };
 		25CFF68916B34C25002E4913 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68816B34C25002E4913 /* Foundation.framework */; };
 		25CFF68B16B34C25002E4913 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68A16B34C25002E4913 /* CoreGraphics.framework */; };
@@ -106,10 +107,11 @@
 		255E305516B35EC9003CA4FD /* MAEventCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAEventCreationViewController.h; sourceTree = "<group>"; };
 		255E305616B35ECA003CA4FD /* MAEventCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAEventCreationViewController.m; sourceTree = "<group>"; };
 		25B8A54016B44CA5007BBBD5 /* plusbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusbutton.png; sourceTree = "<group>"; };
-		25B8A54B16B457C8007BBBD5 /* buttoncircleDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttoncircleDown.png; sourceTree = "<group>"; };
 		25B8A54E16B45AA8007BBBD5 /* tabbarbkgd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarbkgd.png; sourceTree = "<group>"; };
-		25B8A55016B46292007BBBD5 /* Wingdings 2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wingdings 2.ttf"; sourceTree = "<group>"; };
-		25B8A55216B463A6007BBBD5 /* Webdings.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Webdings.ttf; sourceTree = "<group>"; };
+		25B8A55616B4691B007BBBD5 /* buttoncircleDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttoncircleDown.png; sourceTree = "<group>"; };
+		25B8A55816B4696A007BBBD5 /* events.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = events.png; sourceTree = "<group>"; };
+		25B8A55A16B4696F007BBBD5 /* groups.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = groups.png; sourceTree = "<group>"; };
+		25B8A55C16B46975007BBBD5 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		25CFF68216B34C25002E4913 /* Mundi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mundi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25CFF68616B34C25002E4913 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		25CFF68816B34C25002E4913 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -270,10 +272,11 @@
 		25CFF68D16B34C25002E4913 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				25B8A55216B463A6007BBBD5 /* Webdings.ttf */,
-				25B8A55016B46292007BBBD5 /* Wingdings 2.ttf */,
+				25B8A55816B4696A007BBBD5 /* events.png */,
+				25B8A55C16B46975007BBBD5 /* settings.png */,
+				25B8A55A16B4696F007BBBD5 /* groups.png */,
+				25B8A55616B4691B007BBBD5 /* buttoncircleDown.png */,
 				25B8A54E16B45AA8007BBBD5 /* tabbarbkgd.png */,
-				25B8A54B16B457C8007BBBD5 /* buttoncircleDown.png */,
 				25B8A54016B44CA5007BBBD5 /* plusbutton.png */,
 				25D9EABC16B438F700FB3C13 /* buttoncircle.png */,
 				0011B22E16B441570088040B /* bg.png */,
@@ -378,10 +381,11 @@
 				25D9EABD16B438F700FB3C13 /* buttoncircle.png in Resources */,
 				0011B22F16B441570088040B /* bg.png in Resources */,
 				25B8A54116B44CA5007BBBD5 /* plusbutton.png in Resources */,
-				25B8A54C16B457C8007BBBD5 /* buttoncircleDown.png in Resources */,
 				25B8A54F16B45AA8007BBBD5 /* tabbarbkgd.png in Resources */,
-				25B8A55116B46292007BBBD5 /* Wingdings 2.ttf in Resources */,
-				25B8A55316B463A6007BBBD5 /* Webdings.ttf in Resources */,
+				25B8A55716B4691B007BBBD5 /* buttoncircleDown.png in Resources */,
+				25B8A55916B4696A007BBBD5 /* events.png in Resources */,
+				25B8A55B16B4696F007BBBD5 /* groups.png in Resources */,
+				25B8A55D16B46975007BBBD5 /* settings.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

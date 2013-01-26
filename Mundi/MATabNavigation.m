@@ -51,6 +51,7 @@
 - (void)selectedPlusButton:(id)sender
 {
     MAEventCreationViewController *eventCreate = [[MAEventCreationViewController alloc] init];
+    self.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:eventCreate animated:YES completion:nil];
 }
 

@@ -46,10 +46,9 @@
     [profilePicture setImageWithURL:[NSURL URLWithString:pictureURL]];
     
     UIFont *titleFont = [UIFont fontWithName:@"Raleway" size:60];
-    UIFont *locationFont = [UIFont fontWithName:@"DroidSans" size:14];
+    UIFont *locationFont = [UIFont fontWithName:@"DroidSans" size:12];
     UIColor *fontColor = [UIColor colorWithWhite:0.2 alpha:1];
     UIFont *buttonFont = [UIFont fontWithName:@"DroidSans" size:11];
-    UIFont *wingdings = [UIFont fontWithName:@"Wingdings 2" size:40];
     usernameLabel.text = [user objectForKey:@"facebookName"];
     usernameLabel.font = titleFont;
     usernameLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -57,7 +56,7 @@
     usernameLabel.textColor = fontColor;
     usernameLabel.backgroundColor = [UIColor clearColor];
     
-    locationLabel.text = [user objectForKey:@"locationString"];
+    locationLabel.text = [[user objectForKey:@"locationString"] uppercaseString];
     locationLabel.font = locationFont;
     locationLabel.lineBreakMode = NSLineBreakByWordWrapping;
     locationLabel.numberOfLines = 1;
@@ -76,10 +75,13 @@
     settingsLabel.textColor = fontColor;
     settingsLabel.text = @"SETTINGS";
     settingsLabel.textAlignment = NSTextAlignmentCenter;
+    UIImageView *settingsImage = [[UIImageView alloc] initWithFrame:CGRectMake(21, 15, 34, 34)];
+    [settingsImage setImage:[UIImage imageNamed:@"settings.png"]];
     settingsButton.layer.borderWidth = 0.5f;
     settingsButton.layer.cornerRadius = 6;
     settingsButton.layer.borderColor = [fontColor CGColor];
     [settingsButton addSubview:settingsLabel];
+    [settingsButton addSubview:settingsImage];
     [self addSubview:settingsButton];
     
     myEventsButton.frame = CGRectMake(123, 260, 76, 76);
@@ -96,6 +98,10 @@
     [myEventsButton addSubview:eventsLabel];
     [self addSubview:myEventsButton];
     
+    UIImageView *eventsImage = [[UIImageView alloc] initWithFrame:CGRectMake(21, 15, 34, 34)];
+    [eventsImage setImage:[UIImage imageNamed:@"events.png"]];
+    [myEventsButton addSubview:eventsImage];
+    
     myGroupsButton.frame = CGRectMake(220, 260, 76, 76);
     myGroupsButton.backgroundColor = [UIColor whiteColor];
     UILabel *groupsLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 60, 76, 10)];
@@ -109,6 +115,10 @@
     myGroupsButton.layer.borderColor = [fontColor CGColor];
     [myGroupsButton addSubview:groupsLabel];
     [self addSubview:myGroupsButton];
+    
+    UIImageView *groupsImage = [[UIImageView alloc] initWithFrame:CGRectMake(21, 15, 34, 34)];
+    [groupsImage setImage:[UIImage imageNamed:@"groups.png"]];
+    [myGroupsButton addSubview:groupsImage];
     
     self.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1];
 }
