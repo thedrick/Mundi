@@ -20,6 +20,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        UITabBarItem *tbi = [self tabBarItem];
+        [tbi setTitle:@"+"];
     }
     return self;
 }

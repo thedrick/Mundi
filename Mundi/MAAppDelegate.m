@@ -41,9 +41,10 @@
         
     MAEventViewController *eventViewController = [[MAEventViewController alloc] initWithStyle:UITableViewStylePlain];
     MAEventCreationViewController *eventCreation = [[MAEventCreationViewController alloc] init];
+    MAProfileViewController *profileController = [[MAProfileViewController alloc] init];
     
     MATabNavigation *tabController = [[MATabNavigation alloc] init];
-    [tabController setViewControllers:[NSArray arrayWithObjects:eventViewController, eventCreation, nil]];
+    [tabController setViewControllers:[NSArray arrayWithObjects:eventViewController, eventCreation, profileController, nil]];
     MAMainNavController *navController = [[MAMainNavController alloc] initWithRootViewController:tabController];
     self.window.rootViewController = navController;
     
