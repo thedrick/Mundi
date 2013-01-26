@@ -10,4 +10,11 @@
 
 @interface MAProfileViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *username;
+@property (weak, nonatomic) IBOutlet UIImageView *userPicture;
+
+- (IBAction)settings:(id)sender;
+- (IBAction)userEvents:(id)sender;
+- (IBAction)userGroups:(id)sender;
+
 @end

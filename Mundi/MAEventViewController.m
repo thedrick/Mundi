@@ -52,7 +52,7 @@
     [query setCachePolicy:kPFCachePolicyCacheThenNetwork];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
-            NSLog(@"Eror: %@", [error localizedDescription]);
+            NSLog(@"Error: %@", [error localizedDescription]);
         } else {
             events = objects;
             [self.tableView reloadData];
