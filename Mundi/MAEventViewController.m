@@ -23,15 +23,16 @@
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         UITabBarItem *tbi = [self tabBarItem];
-        [tbi setTitle:@"Explore"];
+        [tbi setTitle:@"explore"];
         
-        [tbi setTitlePositionAdjustment:UIOffsetMake(0.0, -10.0)];
+        [tbi setTitlePositionAdjustment:UIOffsetMake(-15.0, -10.0)];
         
         [tbi setTitleTextAttributes:
          [NSDictionary dictionaryWithObjectsAndKeys:
           [UIColor whiteColor], UITextAttributeTextColor,
-          [UIFont fontWithName:@"HelveticaNeue" size:26.0], UITextAttributeFont,
+          [UIFont fontWithName:@"DroidSans" size:26.0], UITextAttributeFont,
           nil] forState:UIControlStateNormal];
+    
     }
     return self;
 }
