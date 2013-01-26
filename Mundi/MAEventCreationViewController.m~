@@ -131,12 +131,31 @@
         [newEvent setObject:userName forKey:@"attendees"];
         [newEvent setObject:time forKey:@"time"];
         [newEvent setObject:date forKey:@"date"];
+<<<<<<< HEAD
         [newEvent setObject:userName forKey:@"createdBy"];
         [newEvent setObject:[user objectForKey:@"facebookName"] forKey:@"creatorUsername"];
         [newEvent setObject:myView.details.text forKey:@"details"];
         
         [newEvent saveInBackground];
+=======
+        [newEvent setObject:user.objectId forKey:@"createdBy"];
+        [newEvent setObject:facebookName forKey:@"creatorUsername"];
+        [newEvent setObject:myView.details.text forKey:@"details"];
+        
+        [newEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                [newEvent refresh];
+                NSString *eventId = newEvent.objectId;
+                NSString *eventIdComma = [@", " stringByAppendingString:eventId];
+                NSString *userCreatedEvents = [user objectForKey:@"createdEvents"];
+                NSString *userCreatedEventsNew = [userCreatedEvents stringByAppendingString:eventIdComma];
+                [user setObject:userCreatedEventsNew forKey:@"createdEvents"];
+                
+                [user saveInBackground];
+            }
+        }];
         [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+>>>>>>> 75537c33f4568010c2048e2063856e8bf205c612
     }
 }
 
