@@ -43,7 +43,6 @@
     [super viewDidLoad];
     [eventName setText:[object objectForKey:@"name"]];
     NSString *date = [object objectForKey:@"date"];
-    [eventTime setText:date];
     [eventLocation setText:[object objectForKey:@"locationString"]];
     [eventDetails setText:[object objectForKey:@"details"]];
     [eventCategory setText:[object objectForKey:@"category"]];
