@@ -13,7 +13,6 @@
 		251B54BD16B37CE900518258 /* MASingleEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 251B54BB16B37CE900518258 /* MASingleEventViewController.m */; };
 		251B54BE16B37CE900518258 /* MASingleEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 251B54BC16B37CE900518258 /* MASingleEventViewController.xib */; };
 		252C766E16B3A7E300E14940 /* raleway_thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 252C766D16B3A7E300E14940 /* raleway_thin.ttf */; };
-		252C767216B3B1BA00E14940 /* tabbarbkgd.png in Resources */ = {isa = PBXBuildFile; fileRef = 252C767116B3B1BA00E14940 /* tabbarbkgd.png */; };
 		252C767516B3B41700E14940 /* MACreateEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 252C767416B3B41700E14940 /* MACreateEventView.m */; };
 		252C767A16B3CD4B00E14940 /* MASingleEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 252C767916B3CD4A00E14940 /* MASingleEventView.m */; };
 		252C767C16B3E24600E14940 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 252C767B16B3E24600E14940 /* Default.png */; };
@@ -40,6 +39,7 @@
 		255E305816B35ECA003CA4FD /* MAEventCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255E305616B35ECA003CA4FD /* MAEventCreationViewController.m */; };
 		25B8A54116B44CA5007BBBD5 /* plusbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A54016B44CA5007BBBD5 /* plusbutton.png */; };
 		25B8A54C16B457C8007BBBD5 /* buttoncircleDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A54B16B457C8007BBBD5 /* buttoncircleDown.png */; };
+		25B8A54F16B45AA8007BBBD5 /* tabbarbkgd.png in Resources */ = {isa = PBXBuildFile; fileRef = 25B8A54E16B45AA8007BBBD5 /* tabbarbkgd.png */; };
 		25CFF68716B34C25002E4913 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68616B34C25002E4913 /* UIKit.framework */; };
 		25CFF68916B34C25002E4913 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68816B34C25002E4913 /* Foundation.framework */; };
 		25CFF68B16B34C25002E4913 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CFF68A16B34C25002E4913 /* CoreGraphics.framework */; };
@@ -71,7 +71,6 @@
 		251B54BB16B37CE900518258 /* MASingleEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASingleEventViewController.m; sourceTree = "<group>"; };
 		251B54BC16B37CE900518258 /* MASingleEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASingleEventViewController.xib; sourceTree = "<group>"; };
 		252C766D16B3A7E300E14940 /* raleway_thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = raleway_thin.ttf; sourceTree = "<group>"; };
-		252C767116B3B1BA00E14940 /* tabbarbkgd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarbkgd.png; sourceTree = "<group>"; };
 		252C767316B3B41700E14940 /* MACreateEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACreateEventView.h; sourceTree = "<group>"; };
 		252C767416B3B41700E14940 /* MACreateEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACreateEventView.m; sourceTree = "<group>"; };
 		252C767816B3CD4A00E14940 /* MASingleEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASingleEventView.h; sourceTree = "<group>"; };
@@ -106,6 +105,7 @@
 		255E305616B35ECA003CA4FD /* MAEventCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAEventCreationViewController.m; sourceTree = "<group>"; };
 		25B8A54016B44CA5007BBBD5 /* plusbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusbutton.png; sourceTree = "<group>"; };
 		25B8A54B16B457C8007BBBD5 /* buttoncircleDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttoncircleDown.png; sourceTree = "<group>"; };
+		25B8A54E16B45AA8007BBBD5 /* tabbarbkgd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarbkgd.png; sourceTree = "<group>"; };
 		25CFF68216B34C25002E4913 /* Mundi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mundi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25CFF68616B34C25002E4913 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		25CFF68816B34C25002E4913 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -266,12 +266,12 @@
 		25CFF68D16B34C25002E4913 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				25B8A54E16B45AA8007BBBD5 /* tabbarbkgd.png */,
 				25B8A54B16B457C8007BBBD5 /* buttoncircleDown.png */,
 				25B8A54016B44CA5007BBBD5 /* plusbutton.png */,
 				25D9EABC16B438F700FB3C13 /* buttoncircle.png */,
 				0011B22E16B441570088040B /* bg.png */,
 				252C767B16B3E24600E14940 /* Default.png */,
-				252C767116B3B1BA00E14940 /* tabbarbkgd.png */,
 				252C766D16B3A7E300E14940 /* raleway_thin.ttf */,
 				2559D81216B397AB00A08A66 /* DroidSans.ttf */,
 				25CFF68E16B34C25002E4913 /* Mundi-Info.plist */,
@@ -368,12 +368,12 @@
 				251B54BE16B37CE900518258 /* MASingleEventViewController.xib in Resources */,
 				2559D81316B397AB00A08A66 /* DroidSans.ttf in Resources */,
 				252C766E16B3A7E300E14940 /* raleway_thin.ttf in Resources */,
-				252C767216B3B1BA00E14940 /* tabbarbkgd.png in Resources */,
 				252C767C16B3E24600E14940 /* Default.png in Resources */,
 				25D9EABD16B438F700FB3C13 /* buttoncircle.png in Resources */,
 				0011B22F16B441570088040B /* bg.png in Resources */,
 				25B8A54116B44CA5007BBBD5 /* plusbutton.png in Resources */,
 				25B8A54C16B457C8007BBBD5 /* buttoncircleDown.png in Resources */,
+				25B8A54F16B45AA8007BBBD5 /* tabbarbkgd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

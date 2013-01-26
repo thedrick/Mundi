@@ -16,10 +16,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabbarbkgd.png"]];
-        [[UITabBar appearance] setSelectedImageTintColor:[UIColor clearColor]];
-        [[UITabBar appearance] setTintColor:[UIColor clearColor]];
-        [[UITabBar appearance] setSelectionIndicatorImage:nil];
     }
     return self;
 }
@@ -40,6 +36,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabbarbkgd.png"]];
+    [[UITabBar appearance] setSelectedImageTintColor:nil];
+    [[UITabBar appearance] setTintColor:[UIColor clearColor]];
+    [[UITabBar appearance] setSelectionIndicatorImage:nil];
 }
 
 - (void)didReceiveMemoryWarning
