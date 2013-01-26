@@ -72,46 +72,46 @@
         [eventTimeView addSubview:time];
         [eventTimeView addSubview:location];
         
-        creatorLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 10, 170, 20)];
+        creatorLabel = [[UILabel alloc] initWithFrame:CGRectMake(120, 10, 170, 20)];
         [creatorLabel setText:@"Creator name here"];
         creatorLabel.font = labelFont;
         creatorLabel.textColor = labelColor;
         creatorLabel.backgroundColor = [UIColor clearColor];
         [eventTimeView addSubview:creatorLabel];
         
-        dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 30, 170, 20)];
+        dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(120, 30, 170, 20)];
         [dateLabel setText:@"Date goes here"];
         dateLabel.font = labelFont;
         dateLabel.textColor = labelColor;
         dateLabel.backgroundColor = [UIColor clearColor];
         [eventTimeView addSubview:dateLabel];
         
-        timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 50, 170, 20)];
+        timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(120, 50, 170, 20)];
         [timeLabel setText:@"Creator name here"];
         timeLabel.font = labelFont;
         timeLabel.textColor = labelColor;
         timeLabel.backgroundColor = [UIColor clearColor];
         [eventTimeView addSubview:timeLabel];
         
-        locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 70, 170, 20)];
+        locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(120, 70, 170, 20)];
         [locationLabel setText:@"Location goes here"];
         locationLabel.font = labelFont;
         locationLabel.textColor = labelColor;
         locationLabel.backgroundColor = [UIColor clearColor];
         [eventTimeView addSubview:locationLabel];
         
-        UILabel *detail = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 70, 20)];
+        UILabel *detail = [[UILabel alloc] initWithFrame:CGRectMake(10, 2, 70, 20)];
         detail.text = @"DETAILS";
         detail.font = labelFont;
         detail.textColor = labelColor;
         [eventDetailView addSubview:detail];
         
-        detailLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, -10, 250, 120)];
+        detailLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, -18, 250, 120)];
         detailLabel.text = @"The details of the event will go here. In this case it will probably involved drinks and Shadyside";
         detailLabel.font = detailFont;
         detailLabel.textColor = labelColor;
         detailLabel.lineBreakMode = NSLineBreakByWordWrapping;
-        detailLabel.numberOfLines = 0;
+        detailLabel.numberOfLines = 3;
         detailLabel.backgroundColor = [UIColor clearColor];
         [eventDetailView addSubview:detailLabel];
         

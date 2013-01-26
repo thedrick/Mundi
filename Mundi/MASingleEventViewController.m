@@ -30,6 +30,11 @@
 - (void)loadView
 {
     MASingleEventView *eventView = [[MASingleEventView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    eventView.eventTitle.text = [object objectForKey:@"name"];
+    eventView.locationLabel.text = [object objectForKey:@"locationString"];
+    eventView.creatorLabel.text = [object objectForKey:@"creatorUsername"];
+    eventView.timeLabel.text = [object objectForKey:@"time"];
+    eventView.detailLabel.text = [object objectForKey:@"details"];
     self.view = eventView;
 }
 
@@ -44,7 +49,7 @@
     [eventTime setText:[dateFormatter stringFromDate:date]];
     [eventLocation setText:[object objectForKey:@"locationString"]];
     [eventDetails setText:[object objectForKey:@"details"]];
-    [eventCategory setText:[object objectForKey:@"creatorUsername"]];
+    [eventCategory setText:[object objectForKey:@"category"]];
     
     PFObject *user = [PFUser currentUser];
     NSString *userAttendingEvents = (NSString *)[user objectForKey:@"attendingEvents"];

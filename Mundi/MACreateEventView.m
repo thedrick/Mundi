@@ -16,6 +16,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1];
         addLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
         eventName = [[UITextField alloc] initWithFrame:CGRectMake(10,
                      addLabel.frame.origin.y + addLabel.frame.size.height + 10,
@@ -70,25 +71,30 @@
     details.layer.borderWidth = 0.5f;
     details.layer.cornerRadius = 2;
     
-    eventName.layer.borderColor = [[UIColor grayColor] CGColor];
+    eventName.layer.borderColor = [[UIColor lightGrayColor] CGColor];
     eventName.layer.borderWidth = 0.5f;
     eventName.layer.cornerRadius = 4;
+    eventName.backgroundColor = [UIColor whiteColor];
     
-    date.layer.borderColor = [[UIColor grayColor] CGColor];
+    date.layer.borderColor = [[UIColor lightGrayColor] CGColor];
     date.layer.borderWidth = 0.5f;
     date.layer.cornerRadius = 4;
+    date.backgroundColor = [UIColor whiteColor];
     
-    time.layer.borderColor = [[UIColor grayColor] CGColor];
+    time.layer.borderColor = [[UIColor lightGrayColor] CGColor];
     time.layer.borderWidth = 0.7f;
     time.layer.cornerRadius = 4;
+    time.backgroundColor = [UIColor whiteColor];
     
-    location.layer.borderColor = [[UIColor grayColor] CGColor];
+    location.layer.borderColor = [[UIColor lightGrayColor] CGColor];
     location.layer.borderWidth = 0.7f;
     location.layer.cornerRadius = 4;
+    location.backgroundColor = [UIColor whiteColor];
     
-    category.layer.borderColor = [[UIColor grayColor] CGColor];
+    category.layer.borderColor = [[UIColor lightGrayColor] CGColor];
     category.layer.borderWidth = 0.7f;
     category.layer.cornerRadius = 4;
+    category.backgroundColor = [UIColor whiteColor];
 
     eventName.placeholder = @"Event name";
     date.placeholder = @"Date";
