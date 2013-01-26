@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0011B22216B4390B0088040B /* MyLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0011B22116B4390B0088040B /* MyLogInViewController.m */; };
+		0011B22516B43A090088040B /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0011B22416B43A090088040B /* bg.png */; };
 		251B54BD16B37CE900518258 /* MASingleEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 251B54BB16B37CE900518258 /* MASingleEventViewController.m */; };
 		251B54BE16B37CE900518258 /* MASingleEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 251B54BC16B37CE900518258 /* MASingleEventViewController.xib */; };
 		252C766E16B3A7E300E14940 /* raleway_thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 252C766D16B3A7E300E14940 /* raleway_thin.ttf */; };
@@ -48,6 +50,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0011B22016B4390B0088040B /* MyLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLogInViewController.h; sourceTree = "<group>"; };
+		0011B22116B4390B0088040B /* MyLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLogInViewController.m; sourceTree = "<group>"; };
+		0011B22416B43A090088040B /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		251B54BA16B37CE900518258 /* MASingleEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASingleEventViewController.h; sourceTree = "<group>"; };
 		251B54BB16B37CE900518258 /* MASingleEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASingleEventViewController.m; sourceTree = "<group>"; };
 		251B54BC16B37CE900518258 /* MASingleEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASingleEventViewController.xib; sourceTree = "<group>"; };
@@ -160,6 +165,8 @@
 				25F677D016B386FD00365BD2 /* MAProfileViewController.m */,
 				252E513E16B34F280057D2D1 /* MATabNavigation.h */,
 				252E513F16B34F280057D2D1 /* MATabNavigation.m */,
+				0011B22016B4390B0088040B /* MyLogInViewController.h */,
+				0011B22116B4390B0088040B /* MyLogInViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -223,6 +230,7 @@
 			children = (
 				25D9EABC16B438F700FB3C13 /* buttoncircle.png */,
 				252C767B16B3E24600E14940 /* Default.png */,
+				0011B22416B43A090088040B /* bg.png */,
 				252C767116B3B1BA00E14940 /* tabbarbkgd.png */,
 				252C766D16B3A7E300E14940 /* raleway_thin.ttf */,
 				2559D81216B397AB00A08A66 /* DroidSans.ttf */,
@@ -297,6 +305,7 @@
 				252C767216B3B1BA00E14940 /* tabbarbkgd.png in Resources */,
 				252C767C16B3E24600E14940 /* Default.png in Resources */,
 				25D9EABD16B438F700FB3C13 /* buttoncircle.png in Resources */,
+				0011B22516B43A090088040B /* bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +328,7 @@
 				252C767516B3B41700E14940 /* MACreateEventView.m in Sources */,
 				252C767A16B3CD4B00E14940 /* MASingleEventView.m in Sources */,
 				252C767F16B4176A00E14940 /* MAProfileView.m in Sources */,
+				0011B22216B4390B0088040B /* MyLogInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
